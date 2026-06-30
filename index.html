@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Czárth Csanád | SEO & Marketing Expert</title>
-  <meta name="description" content="SEO és marketing szakértő. Google Top 10 weboldal évi 90 000 Ft+ÁFA-tól. Marketing, cégépítés, skálázás." />
+  <meta name="description" content="SEO és marketing szakértő. Google Top 10 weboldal évi 98 000 Ft-tól. Marketing, cégépítés, skálázás." />
   <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cdefs%3E%3ClinearGradient id='fy' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' stop-color='%23FFE234'/%3E%3Cstop offset='100%25' stop-color='%23FF9500'/%3E%3C/linearGradient%3E%3ClinearGradient id='fp' x1='100%25' y1='0%25' x2='0%25' y2='100%25'%3E%3Cstop offset='0%25' stop-color='%23FFB08A'/%3E%3Cstop offset='100%25' stop-color='%23FF4757'/%3E%3C/linearGradient%3E%3ClinearGradient id='fb' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' stop-color='%235ECEF7'/%3E%3Cstop offset='100%25' stop-color='%23B48AFF'/%3E%3C/linearGradient%3E%3ClinearGradient id='fm' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' stop-color='%23FF5C88'/%3E%3Cstop offset='100%25' stop-color='%23FF006E'/%3E%3C/linearGradient%3E%3C/defs%3E%3Cg style='isolation:isolate'%3E%3Crect x='36' y='2' width='62' height='62' rx='17' fill='url(%23fy)'/%3E%3Crect x='2' y='2' width='62' height='62' rx='17' fill='url(%23fp)' style='mix-blend-mode:multiply'/%3E%3Crect x='2' y='36' width='62' height='62' rx='17' fill='url(%23fb)' style='mix-blend-mode:multiply'/%3E%3Crect x='36' y='36' width='62' height='62' rx='17' fill='url(%23fm)' style='mix-blend-mode:multiply'/%3E%3C/g%3E%3C/svg%3E" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -216,6 +216,18 @@
     .netflix-side ul li::before { content: "✦"; color: var(--t); font-size: .65rem; flex-shrink: 0; margin-top: 3px; }
     .netflix-plus { font-size: 1.8rem; text-align: center; color: var(--t); font-weight: 900; }
 
+    /* ── PROCESS ── */
+    #process { background: var(--bg2); }
+    .process-steps { display: grid; grid-template-columns: repeat(4, 1fr); gap: 0; margin-top: 48px; position: relative; }
+    .process-steps::before { content: ''; position: absolute; top: 28px; left: calc(12.5% + 16px); right: calc(12.5% + 16px); height: 2px; background: linear-gradient(90deg, var(--t), var(--e)); opacity: .25; }
+    @media (max-width: 800px) { .process-steps { grid-template-columns: 1fr 1fr; gap: 24px; } .process-steps::before { display: none; } }
+    @media (max-width: 480px) { .process-steps { grid-template-columns: 1fr; } }
+    .process-step { display: flex; flex-direction: column; align-items: center; text-align: center; padding: 0 16px; }
+    .process-num { width: 56px; height: 56px; border-radius: 50%; background: linear-gradient(135deg, var(--t), var(--e)); color: #fff; font-size: 1.25rem; font-weight: 900; display: flex; align-items: center; justify-content: center; flex-shrink: 0; box-shadow: 0 4px 20px rgba(13,148,136,.3); position: relative; z-index: 1; }
+    .process-step h3 { font-size: .975rem; font-weight: 800; margin: 16px 0 8px; color: var(--text); }
+    .process-step p { font-size: .825rem; line-height: 1.65; color: var(--dim); }
+    .process-cta { text-align: center; margin-top: 44px; }
+
     /* ── APPROACH ── */
     #approach { background: var(--bg); padding: 72px 5vw; }
     .approach-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; margin-top: 36px; }
@@ -417,6 +429,39 @@
   </div>
 </section>
 
+<!-- PROCESS -->
+<section id="process">
+  <div class="section-inner">
+    <div class="tag" data-i18n="process_tag">Hogyan működik</div>
+    <h2 data-i18n="process_title">4 lépés a Google első oldaláig</h2>
+    <div class="process-steps">
+      <div class="process-step">
+        <div class="process-num">1</div>
+        <h3 data-i18n="proc1_title">Demót kérsz</h3>
+        <p data-i18n="proc1_desc">Kitöltöd az egyszerű kapcsolatfelvételi űrlapot — pár sorban elegendő.</p>
+      </div>
+      <div class="process-step">
+        <div class="process-num">2</div>
+        <h3 data-i18n="proc2_title">Elkészítem a demódat</h3>
+        <p data-i18n="proc2_desc">2–3 napon belül egy valódi, egyedi weboldalt kapsz a te területedre — teljesen ingyen.</p>
+      </div>
+      <div class="process-step">
+        <div class="process-num">3</div>
+        <h3 data-i18n="proc3_title">Megnézed, döntesz</h3>
+        <p data-i18n="proc3_desc">Ha tetszik, megkezdjük az együttműködést. Ha nem — semmi kötelezettség, semmi nyomás.</p>
+      </div>
+      <div class="process-step">
+        <div class="process-num">4</div>
+        <h3 data-i18n="proc4_title">Megjelensz a Google-ben</h3>
+        <p data-i18n="proc4_desc">Az oldal elindul, én gondoskodom a Top 10-ről, a karbantartásról és a tárhelyről.</p>
+      </div>
+    </div>
+    <div class="process-cta">
+      <a href="#cta" class="btn btn-primary" data-i18n="process_btn">Ingyenes Demo kérése</a>
+    </div>
+  </div>
+</section>
+
 <!-- APPROACH -->
 <section id="approach">
   <div class="section-inner">
@@ -463,7 +508,7 @@
           </svg>
         </div>
         <h3 data-i18n="ap3_title">AI eszközök + emberi stratégia</h3>
-        <p data-i18n="ap3_desc">A legmodernebb AI eszközöket is bevetek a hatékonyságért — de a döntések, az elemzés és a stratégia mindig emberi tudáson és tapasztalaton alapul.</p>
+        <p data-i18n="ap3_desc">A legmodernebb AI eszközöket is bevetem a hatékonyságért — de a döntések, az elemzés és a stratégia mindig emberi tudáson és tapasztalaton alapul.</p>
       </div>
     </div>
   </div>
@@ -697,9 +742,14 @@
     <div class="tag" data-i18n="cta_tag">Kapcsolat</div>
     <h2 data-i18n="cta_title">Érdekel a demo vagy egy ajánlat?</h2>
     <p data-i18n="cta_desc">Írj emailben — általában 24 órán belül válaszolok. Az ingyenes demo kérésed is itt kezdődik.</p>
-    <a class="btn btn-primary" href="mailto:csanad@czarth.com" style="margin-top:8px" data-i18n="cta_btn">Demo kérése / Kapcsolatfelvétel</a>
-    <br/>
-    <p style="color:var(--dim);font-size:.875rem;margin-top:20px;margin-bottom:8px" data-i18n="cta_phone_label">Írj WhatsAppon vagy csörögj rám:</p>
+    <div style="display:flex;gap:12px;flex-wrap:wrap;margin-top:8px;justify-content:center">
+      <a class="btn btn-primary" href="mailto:csanad@czarth.com" data-i18n="cta_btn">Demo kérése / Kapcsolatfelvétel</a>
+      <a class="btn btn-outline" href="https://wa.me/36705267213" target="_blank" rel="noopener" data-i18n="cta_whatsapp_btn">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.127.558 4.126 1.533 5.857L.057 23.887c-.074.273.159.54.44.474l6.186-1.596A11.947 11.947 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.818 9.818 0 01-5.064-1.404l-.363-.217-3.756.968.997-3.649-.237-.374A9.818 9.818 0 1112 21.818z"/></svg>
+        WhatsApp
+      </a>
+    </div>
+    <p style="color:var(--dim);font-size:.875rem;margin-top:20px;margin-bottom:8px" data-i18n="cta_phone_label">Vagy csörögj rám:</p>
     <a class="cta-email" href="tel:+36705267213">
       <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.8 19.79 19.79 0 01.01 1.17 2 2 0 012 0h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 14.92z"/></svg>
       +36 70 526 7213
@@ -749,9 +799,9 @@
           <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.8 19.79 19.79 0 01.01 1.17 2 2 0 012 0h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 14.92z"/></svg>
           +36 70 526 7213
         </a>
-        <a href="mailto:csanad@czarth.com" style="margin-top:4px">
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><polyline points="2,4 12,13 22,4"/></svg>
-          csanad@czarth.com
+        <a href="https://wa.me/36705267213" target="_blank" rel="noopener" style="margin-top:4px">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.127.558 4.126 1.533 5.857L.057 23.887c-.074.273.159.54.44.474l6.186-1.596A11.947 11.947 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.818 9.818 0 01-5.064-1.404l-.363-.217-3.756.968.997-3.649-.237-.374A9.818 9.818 0 1112 21.818z"/></svg>
+          WhatsApp
         </a>
       </div>
     </div>
@@ -781,7 +831,7 @@
 <script>
 const T = {
   hu: {
-    nav_home: 'Home', nav_product: 'Főtermék', nav_services: 'Szolgáltatások', nav_refs: 'Referenciák', nav_about: 'Rólam', nav_contact: 'Kapcsolat',
+    nav_home: 'Home', nav_process: 'Folyamat', nav_product: 'Főtermék', nav_services: 'Szolgáltatások', nav_refs: 'Referenciák', nav_about: 'Rólam', nav_contact: 'Kapcsolat',
     hero_tag: 'SEO & Marketing Szakértő',
     hero_title: 'Google Top 10-es weboldalak,<br><em>évi fix díjjal</em>',
     hero_sub: 'Professzionális weboldalak, amelyek ténylegesen megjelennek a Google keresési eredmények első oldalán — folyamatos karbantartással, frissítéssel és tárhellyel együtt.',
@@ -789,7 +839,7 @@ const T = {
     approach_tag: 'Hogyan dolgozom', approach_title: 'Egyéni szakértő, nem ügynökség',
     ap1_title: 'Személyes figyelem', ap1_desc: 'Nem egy névtelen team, hanem én foglalkozom a vállalkozásoddal — elejétől végéig. Minden ügyfél megkapja a teljes fókuszt és a személyes törődést.',
     ap2_title: 'Kézműves precizitás', ap2_desc: 'Minden projektet alaposan, egyedileg dolgozok ki — a te vállalkozásodra szabva. Nem sablon, nem tömeggyártás. Az aprólékos munka hozza a tartós eredményt.',
-    ap3_title: 'AI eszközök + emberi stratégia', ap3_desc: 'A legmodernebb AI eszközöket is bevetek a hatékonyságért — de a döntések, az elemzés és a stratégia mindig emberi tudáson és tapasztalaton alapul.',
+    ap3_title: 'AI eszközök + emberi stratégia', ap3_desc: 'A legmodernebb AI eszközöket is bevetem a hatékonyságért — de a döntések, az elemzés és a stratégia mindig emberi tudáson és tapasztalaton alapul.',
     product_tag: 'Főtermék', product_title: 'Weboldal a Google Top 10-ben',
     product_desc: 'Éves megújuló konstrukció: egy célzott, SEO-optimalizált weboldal, amely a kiválasztott kulcsszavakra a Google első oldalán szerepel — gondoskodva a technológiai háttérről, tárhelyről és folyamatos fejlesztésről.',
     netflix_label: 'Hogyan működik', netflix_title: 'Mint a Netflix — ez egy weboldal + domain + szakértelem bérlése.',
@@ -827,7 +877,12 @@ const T = {
     cta_tag: 'Kapcsolat', cta_title: 'Érdekel a demo vagy egy ajánlat?',
     cta_desc: 'Írj emailben — általában 24 órán belül válaszolok. Az ingyenes demo kérésed is itt kezdődik.',
     cta_btn: 'Demo kérése / Kapcsolatfelvétel',
-    cta_phone_label: 'Írj WhatsAppon vagy csörögj rám:',
+    cta_phone_label: 'Vagy csörögj rám:', cta_whatsapp_btn: 'WhatsApp',
+    process_tag: 'Hogyan működik', process_title: '4 lépés a Google első oldaláig', process_btn: 'Ingyenes Demo kérése',
+    proc1_title: 'Demót kérsz', proc1_desc: 'Kitöltöd az egyszerű kapcsolatfelvételi űrlapot — pár sorban elegendő.',
+    proc2_title: 'Elkészítem a demódat', proc2_desc: '2–3 napon belül egy valódi, egyedi weboldalt kapsz a te területedre — teljesen ingyen.',
+    proc3_title: 'Megnézed, döntesz', proc3_desc: 'Ha tetszik, megkezdjük az együttműködést. Ha nem — semmi kötelezettség, semmi nyomás.',
+    proc4_title: 'Megjelensz a Google-ben', proc4_desc: 'Az oldal elindul, én gondoskodom a Top 10-ről, a karbantartásról és a tárhelyről.',
     testimonials_tag: 'Visszajelzések',
     testimonials_title: 'Mit mondanak azok, akikkel dolgoztam',
     faq_tag: 'GYIK',
@@ -843,12 +898,13 @@ const T = {
       { initials: 'CF', color: '#db2777', name: 'Csaba Fekete', role: 'Tesztmenedzser', text: 'Csanád rendkívül nyitott gondolkodású, innovatív szemléletű ember. Szakmai hozzáállása, kíváncsisága és fejlesztési javaslatai az egész csapatnak önbizalmat adtak.' },
     ],
     faqs: [
-      { q: 'Mennyibe kerül pontosan?', a: 'Az éves konstrukció ára 90 000 Ft + ÁFA / év, ami havi szinten kevesebb mint 9 000 Ft. Ez tartalmazza a tárhelyet, a karbantartást és a folyamatos optimalizálást.' },
+      { q: 'Mennyibe kerül pontosan?', a: 'Nem ÁFÁs vállalkozásoknak 98 000 Ft / év, ÁFÁs vállalkozásoknak 98 000 Ft + ÁFA / év. Ez tartalmazza a tárhelyet, a karbantartást és a folyamatos optimalizálást — havi szinten kevesebb mint 10 000 Ft.' },
       { q: 'Mennyi idő alatt lesz a weboldal a Top 10-ben?', a: 'Általában 3–6 hónap szükséges az első stabil pozíciókhoz. Ez függ a kulcsszó versenyétől és a domain erejétől.' },
       { q: 'Mit jelent az éves megújuló konstrukció?', a: 'Kifizeted az éves díjat — és kapsz egy Google-ben élő weboldalt, tárhellyel, frissítésekkel és SEO karbantartással együtt. Nem kell fejlesztővel, szerverrel vagy technikával foglalkoznod. Te csak a beérkező ügyfelekre fókuszálsz.' },
       { q: 'Kell már weboldal ahhoz, hogy együtt dolgozhassunk?', a: 'Nem feltétlenül — szívesen segítek meglévő weboldalt is optimalizálni. A fő termék azonban egy teljesen új weboldal, egy olyan domainen, amit közösen választunk ki, és ami a Google-ben is erősen szerepel.' },
       { q: 'Mi az a demo, és miért ingyenes?', a: 'Minden érdeklődőnek készítek egy egyedi demó oldalt — teljesen ingyen. Pontosan látod, milyen weboldalt kapnál a te vállalkozásodra szabva. Csak utána kell döntened, hogy szeretnéd-e a szolgáltatást.' },
       { q: 'Milyen vállalkozásoknak ajánlod ezt a szolgáltatást?', a: 'Leginkább lokális, magyar piacra szóló vállalkozásoknak: étterem, kisiparos, fodrász, ügyvéd, fogorvos — ahol a Google Top 10 valódi ügyfeleket hoz.' },
+      { q: 'Év közben is elérhető leszel?', a: 'Igen — bármikor írhatsz, ha kérdésed van. Rendszeres riportokat is küldök: látod, hogyan fejlődnek a pozíciók, mi zajlik a háttérben. Nem leszel magadra hagyva.' },
     ],
   },
   en: {
@@ -892,6 +948,11 @@ const T = {
     cta_desc: 'Drop me an email — I usually reply within 24 hours. Your free demo request starts here.',
     cta_btn: 'Request Demo / Get in Touch',
     cta_phone_label: 'Message me on WhatsApp or give me a call:',
+    process_tag: 'How it works', process_title: '4 steps to Google\'s first page', process_btn: 'Request Free Demo',
+    proc1_title: 'Request a demo', proc1_desc: 'Fill in the short contact form — just a few lines is enough.',
+    proc2_title: 'I build your demo', proc2_desc: 'Within 2–3 days you receive a real, custom website for your niche — completely free.',
+    proc3_title: 'You see it, you decide', proc3_desc: 'If you like it, we start. If not — no commitment, no pressure.',
+    proc4_title: 'You appear on Google', proc4_desc: 'The site goes live and I take care of Top 10, maintenance and hosting.',
     testimonials_tag: 'Testimonials',
     testimonials_title: 'What those I\'ve worked with say',
     faq_tag: 'FAQ',
@@ -913,6 +974,7 @@ const T = {
       { q: 'Do I need an existing website to work together?', a: 'Not necessarily. The most common scenario is that I operate a site with its own domain, optimised for your business.' },
       { q: 'What is the demo, and why is it free?', a: 'For the demo, I show you an existing, already well-ranking site to illustrate what to expect. You then decide whether to proceed.' },
       { q: 'What type of businesses do you recommend this for?', a: 'Mainly local businesses: restaurants, tradespeople, hairdressers, lawyers, dentists — anywhere Google Top 10 brings real clients.' },
+      { q: 'Are you reachable throughout the year?', a: 'Yes — you can message me any time with questions. I also send regular reports so you can see how your rankings are progressing. You won\'t be left on your own.' },
     ],
   },
   hr: {
@@ -977,6 +1039,7 @@ const T = {
       { q: 'Treba li mi postojeća web stranica?', a: 'Ne nužno. Najčešće upravljam web stranicom s vlastitom domenom, optimiziranom za vaše poslovanje.' },
       { q: 'Što je demo i zašto je besplatan?', a: 'Za demo prikazujem postojeću, već dobro rangiranu web stranicu kako bih pokazao što možete očekivati. Zatim odlučujete.' },
       { q: 'Za koje vrste tvrtki preporučuješ ovu uslugu?', a: 'Uglavnom za lokalne tvrtke: restorane, obrtnike, frizere, odvjetnike, stomatologe — svugdje gdje Google Top 10 donosi prave klijente.' },
+      { q: 'Jesi li dostupan tijekom cijele godine?', a: 'Da — možete mi pisati u bilo koje vrijeme s pitanjima. Šaljem i redovite izvještaje kako biste vidjeli kako napreduju vaše pozicije. Nećete biti prepušteni sami sebi.' },
     ],
   },
   sr: {
@@ -1041,6 +1104,7 @@ const T = {
       { q: 'Da li mi je potreban postojeći sajt?', a: 'Nije neophodno. Najčešće upravljam sajtom sa sopstvenim domenom, optimizovanim za vaše poslovanje.' },
       { q: 'Šta je demo i zašto je besplatan?', a: 'Za demo prikazujem postojeći, već dobro rangiran sajt kako bih pokazao šta možete očekivati. Zatim odlučujete.' },
       { q: 'Za koje vrste firmi preporučuješ ovu uslugu?', a: 'Uglavnom za lokalne firme: restorane, zanatlije, frizere, advokate, stomatologe — svuda gde Google Top 10 donosi prave klijente.' },
+      { q: 'Da li si dostupan tokom cele godine?', a: 'Da — možete mi pisati u bilo koje vreme s pitanjima. Šaljem i redovne izveštaje kako biste videli kako napreduju vaše pozicije. Nećete biti prepušteni sami sebi.' },
     ],
   },
   de: {
@@ -1105,6 +1169,7 @@ const T = {
       { q: 'Brauche ich eine bestehende Website?', a: 'Nicht unbedingt. Der häufigste Fall ist, dass ich eine Website mit eigener Domain betreibe, die auf Ihr Unternehmen optimiert ist.' },
       { q: 'Was ist die Demo, und warum ist sie kostenlos?', a: 'Bei der Demo zeige ich Ihnen eine bestehende, bereits gut rankende Website, um zu zeigen, was Sie erwarten können. Danach entscheiden Sie.' },
       { q: 'Für welche Unternehmen empfiehlst du diesen Service?', a: 'Vor allem für lokale Unternehmen: Restaurants, Handwerker, Friseure, Anwälte, Zahnärzte — überall, wo Google Top 10 echte Kunden bringt.' },
+      { q: 'Bist du das ganze Jahr über erreichbar?', a: 'Ja — Sie können mir jederzeit Fragen stellen. Ich sende auch regelmäßige Berichte, damit Sie sehen, wie Ihre Rankings sich entwickeln. Sie werden nicht allein gelassen.' },
     ],
   }
 };
@@ -1196,13 +1261,13 @@ function setLang(lang, updateUrl) {
 
 // Scroll arrow — always visible, always points to next section
 (function() {
-  const SECS = ['hero','approach','product','services','small','references','about','testimonials','faq','cta'];
+  const SECS = ['hero','process','approach','product','services','small','references','about','testimonials','faq','cta'];
   const arrow = document.getElementById('scrollArrow');
   function update() {
     const scrollY = window.scrollY;
     const viewH = window.innerHeight;
-    const docH = document.documentElement.scrollHeight;
-    if (scrollY + viewH >= docH - 80) { arrow.classList.add('hidden'); return; }
+    const footer = document.querySelector('footer');
+    if (footer && footer.getBoundingClientRect().top < window.innerHeight) { arrow.classList.add('hidden'); return; }
     arrow.classList.remove('hidden');
     let cur = 0;
     SECS.forEach((id, i) => {
