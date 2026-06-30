@@ -216,6 +216,17 @@
     .netflix-side ul li::before { content: "✦"; color: var(--t); font-size: .65rem; flex-shrink: 0; margin-top: 3px; }
     .netflix-plus { font-size: 1.8rem; text-align: center; color: var(--t); font-weight: 900; }
 
+    /* ── HERO TRUST BAR ── */
+    .hero-trust { display: flex; gap: 20px; margin-top: 24px; flex-wrap: wrap; }
+    .hero-trust span { display: flex; align-items: center; gap: 7px; font-size: .82rem; font-weight: 700; color: var(--t); letter-spacing: -.01em; }
+    .hero-trust span svg { flex-shrink: 0; }
+
+    /* ── DEMO BLOCK ENHANCED ── */
+    .demo-badge { display: inline-flex; align-items: center; gap: 6px; background: linear-gradient(135deg, var(--t), var(--e)); color: #fff; font-size: .72rem; font-weight: 800; letter-spacing: .08em; text-transform: uppercase; padding: 5px 14px; border-radius: 20px; margin-bottom: 14px; }
+    .demo-block-headline { font-size: 1.35rem; font-weight: 900; color: var(--text); margin-bottom: 10px; letter-spacing: -.025em; line-height: 1.2; }
+    .demo-block-sub { font-size: .875rem; color: var(--dim); line-height: 1.7; margin-bottom: 20px; }
+    .demo-block-note { font-size: .75rem; color: var(--dim); margin-top: 10px; opacity: .8; }
+
     /* ── PROCESS ── */
     #process { background: var(--bg2); }
     .process-steps { display: grid; grid-template-columns: repeat(4, 1fr); gap: 0; margin-top: 48px; position: relative; }
@@ -426,6 +437,20 @@
       <a href="#product" class="btn btn-primary" data-i18n="hero_cta_demo">Ingyenes Demo</a>
       <a href="#cta" class="btn btn-outline" data-i18n="hero_cta_contact">Kapcsolatfelvétel</a>
     </div>
+    <div class="hero-trust">
+      <span>
+        <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><circle cx="8" cy="8" r="7.5" stroke="#0d9488" stroke-width="1.2"/><polyline points="4.5,8.5 7,11 11.5,5.5" stroke="#0d9488" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        <span data-i18n="trust_1">Ingyenes demo oldalt készítek neked</span>
+      </span>
+      <span>
+        <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><circle cx="8" cy="8" r="7.5" stroke="#0d9488" stroke-width="1.2"/><polyline points="4.5,8.5 7,11 11.5,5.5" stroke="#0d9488" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        <span data-i18n="trust_2">Csak utána döntesz</span>
+      </span>
+      <span>
+        <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><circle cx="8" cy="8" r="7.5" stroke="#0d9488" stroke-width="1.2"/><polyline points="4.5,8.5 7,11 11.5,5.5" stroke="#0d9488" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        <span data-i18n="trust_3">Semmi kötelezettség</span>
+      </span>
+    </div>
   </div>
 </section>
 
@@ -571,9 +596,14 @@
         </ul>
       </div>
       <div class="demo-block">
-        <h3 data-i18n="demo_title">Ingyenes Demo</h3>
-        <p data-i18n="demo_desc">Minden ajánlatnál készítek egy ingyenes demót, hogy lásd, milyen weboldalt tudok készíteni a te területeden — kötelezettség nélkül.</p>
+        <div class="demo-badge">
+          <svg width="13" height="13" viewBox="0 0 16 16" fill="none"><circle cx="8" cy="8" r="7.5" stroke="#fff" stroke-width="1.2"/><polyline points="4.5,8.5 7,11 11.5,5.5" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <span data-i18n="demo_badge">Ingyenes & Kötelezettség nélkül</span>
+        </div>
+        <div class="demo-block-headline" data-i18n="demo_headline">Előbb látod, utána döntesz.</div>
+        <p class="demo-block-sub" data-i18n="demo_desc">Minden érdeklődőnek készítek egy egyedi demó oldalt — ingyen. Pontosan látod, milyen weboldalt kapnál a te vállalkozásodra szabva. Csak utána kell döntened, hogy szeretnéd-e a szolgáltatást.</p>
         <a href="#cta" class="btn btn-primary" data-i18n="demo_cta">Demo kérése</a>
+        <p class="demo-block-note" data-i18n="demo_note">2–3 napon belül kész. Semmit nem kell fizetni előre.</p>
       </div>
     </div>
   </div>
@@ -836,6 +866,8 @@ const T = {
     hero_title: 'Google Top 10-es weboldalak,<br><em>évi fix díjjal</em>',
     hero_sub: 'Professzionális weboldalak, amelyek ténylegesen megjelennek a Google keresési eredmények első oldalán — folyamatos karbantartással, frissítéssel és tárhellyel együtt.',
     hero_cta_demo: 'Ingyenes Demo', hero_cta_contact: 'Kapcsolatfelvétel',
+    trust_1: 'Ingyenes demo oldalt készítek neked', trust_2: 'Csak utána döntesz', trust_3: 'Semmi kötelezettség',
+    demo_badge: 'Ingyenes & Kötelezettség nélkül', demo_headline: 'Előbb látod, utána döntesz.', demo_note: '2–3 napon belül kész. Semmit nem kell fizetni előre.',
     approach_tag: 'Hogyan dolgozom', approach_title: 'Egyéni szakértő, nem ügynökség',
     ap1_title: 'Személyes figyelem', ap1_desc: 'Nem egy névtelen team, hanem én foglalkozom a vállalkozásoddal — elejétől végéig. Minden ügyfél megkapja a teljes fókuszt és a személyes törődést.',
     ap2_title: 'Kézműves precizitás', ap2_desc: 'Minden projektet alaposan, egyedileg dolgozok ki — a te vállalkozásodra szabva. Nem sablon, nem tömeggyártás. Az aprólékos munka hozza a tartós eredményt.',
@@ -914,6 +946,8 @@ const T = {
     hero_title: 'Google Top 10 Websites,<br><em>fixed annual fee</em>',
     hero_sub: 'Professional websites that actually rank on the first page of Google — with continuous maintenance, updates and hosting included.',
     hero_cta_demo: 'Free Demo', hero_cta_contact: 'Get in Touch',
+    trust_1: 'I build you a free demo website', trust_2: 'You decide afterwards', trust_3: 'Zero commitment',
+    demo_badge: 'Free & No Commitment', demo_headline: 'See it first, decide later.', demo_note: 'Ready in 2–3 days. Nothing to pay upfront.',
     approach_tag: 'How I work', approach_title: 'One dedicated expert, not an agency',
     ap1_title: 'Personal attention', ap1_desc: 'Not a nameless team — I work on your business personally, from start to finish. Every client gets full focus and genuine care.',
     ap2_title: 'Craftsman-level precision', ap2_desc: 'Every project is developed thoroughly and individually, tailored to your business. No templates, no mass production. Careful work delivers lasting results.',
@@ -985,6 +1019,8 @@ const T = {
     hero_title: 'Web stranice u Google Top 10,<br><em>fiksna godišnja naknada</em>',
     hero_sub: 'Profesionalne web stranice koje se stvarno pojavljuju na prvoj stranici Google rezultata — s kontinuiranim održavanjem, ažuriranjima i hostingom u cijeni.',
     hero_cta_demo: 'Besplatni Demo', hero_cta_contact: 'Kontaktirajte me',
+    trust_1: 'Izrađujem vam besplatnu demo stranicu', trust_2: 'Vi odlučujete nakon toga', trust_3: 'Nikakvih obveza',
+    demo_badge: 'Besplatno & Bez obveza', demo_headline: 'Prvo vidite, pa odlučite.', demo_note: 'Gotovo za 2–3 dana. Ništa ne plaćate unaprijed.',
     approach_tag: 'Kako radim', approach_title: 'Jedan stručnjak, ne agencija',
     ap1_title: 'Osobna pažnja', ap1_desc: 'Ne anonimni tim — ja osobno radim na vašem poslu, od početka do kraja. Svaki klijent dobiva punu pažnju i iskrenu brigu.',
     ap2_title: 'Zanatska preciznost', ap2_desc: 'Svaki projekt razvijam temeljito i individualno, prilagođeno vašem poslovanju. Bez predložaka, bez masovne proizvodnje. Pažljiv rad donosi trajne rezultate.',
@@ -1051,6 +1087,8 @@ const T = {
     hero_title: 'Veb sajtovi u Google Top 10,<br><em>fiksna godišnja naknada</em>',
     hero_sub: 'Profesionalni veb sajtovi koji se zaista pojavljuju na prvoj stranici Google rezultata — s kontinuiranim održavanjem, ažuriranjima i hostingom u ceni.',
     hero_cta_demo: 'Besplatni Demo', hero_cta_contact: 'Kontaktirajte me',
+    trust_1: 'Izrađujem vam besplatni demo sajt', trust_2: 'Vi odlučujete nakon toga', trust_3: 'Nikakvih obaveza',
+    demo_badge: 'Besplatno & Bez obaveza', demo_headline: 'Prvo vidite, pa odlučite.', demo_note: 'Gotovo za 2–3 dana. Ništa ne plaćate unapred.',
     approach_tag: 'Kako radim', approach_title: 'Jedan stručnjak, ne agencija',
     ap1_title: 'Lična pažnja', ap1_desc: 'Ne anonimni tim — ja lično radim na vašem poslu, od početka do kraja. Svaki klijent dobija punu pažnju i iskrenu brigu.',
     ap2_title: 'Zanatska preciznost', ap2_desc: 'Svaki projekat razvijam temeljno i individualno, prilagođeno vašem poslovanju. Bez šablona, bez masovne proizvodnje. Pažljiv rad donosi trajne rezultate.',
@@ -1117,6 +1155,8 @@ const T = {
     hero_title: 'Google-Top-10-Websites,<br><em>zum festen Jahrespreis</em>',
     hero_sub: 'Professionelle Websites, die tatsächlich auf der ersten Google-Seite erscheinen — mit laufender Wartung, Updates und Hosting inklusive.',
     hero_cta_demo: 'Kostenlose Demo', hero_cta_contact: 'Kontakt aufnehmen',
+    trust_1: 'Ich erstelle Ihnen eine kostenlose Demo-Website', trust_2: 'Sie entscheiden danach', trust_3: 'Keinerlei Verpflichtung',
+    demo_badge: 'Kostenlos & Unverbindlich', demo_headline: 'Erst sehen, dann entscheiden.', demo_note: 'In 2–3 Tagen fertig. Keine Vorauszahlung.',
     approach_tag: 'Meine Arbeitsweise', approach_title: 'Ein Experte, keine Agentur',
     ap1_title: 'Persönliche Betreuung', ap1_desc: 'Kein anonymes Team — ich persönlich kümmere mich von Anfang bis Ende um Ihr Unternehmen. Jeder Kunde bekommt volle Aufmerksamkeit und echte Sorgfalt.',
     ap2_title: 'Handwerkliche Präzision', ap2_desc: 'Jedes Projekt entwickle ich gründlich und individuell, zugeschnitten auf Ihr Unternehmen. Keine Vorlagen, keine Massenproduktion. Sorgfältige Arbeit bringt nachhaltige Ergebnisse.',
