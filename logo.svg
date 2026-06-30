@@ -1,0 +1,14 @@
+<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'>
+  <defs>
+    <linearGradient id='fy' x1='0%' y1='0%' x2='100%' y2='100%'><stop offset='0%' stop-color='#FFE234'/><stop offset='100%' stop-color='#FF9500'/></linearGradient>
+    <linearGradient id='fp' x1='100%' y1='0%' x2='0%' y2='100%'><stop offset='0%' stop-color='#FFB08A'/><stop offset='100%' stop-color='#FF4757'/></linearGradient>
+    <linearGradient id='fb' x1='0%' y1='0%' x2='100%' y2='100%'><stop offset='0%' stop-color='#5ECEF7'/><stop offset='100%' stop-color='#B48AFF'/></linearGradient>
+    <linearGradient id='fm' x1='0%' y1='0%' x2='100%' y2='100%'><stop offset='0%' stop-color='#FF5C88'/><stop offset='100%' stop-color='#FF006E'/></linearGradient>
+  </defs>
+  <g style='isolation:isolate'>
+    <rect x='36' y='2' width='62' height='62' rx='17' fill='url(#fy)'/>
+    <rect x='2' y='2' width='62' height='62' rx='17' fill='url(#fp)' style='mix-blend-mode:multiply'/>
+    <rect x='2' y='36' width='62' height='62' rx='17' fill='url(#fb)' style='mix-blend-mode:multiply'/>
+    <rect x='36' y='36' width='62' height='62' rx='17' fill='url(#fm)' style='mix-blend-mode:multiply'/>
+  </g>
+</svg>
