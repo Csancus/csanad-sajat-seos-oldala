@@ -295,10 +295,12 @@
     #about h2 { color: var(--section2-text); }
     #about > .section-inner > p { color: var(--section2-sub); line-height: 1.85; transition: color .3s; max-width: 660px; margin-top: 20px; }
     .about-inner { display: flex; align-items: flex-start; gap: 48px; }
-    .about-photo { width: 220px; height: 220px; object-fit: cover; object-position: top center; border-radius: 20px; flex-shrink: 0; box-shadow: 0 8px 32px rgba(0,0,0,.15); }
+    .about-figure { flex-shrink: 0; margin: 0; text-align: center; }
+    .about-photo { width: 220px; height: 220px; object-fit: cover; object-position: top center; border-radius: 20px; display: block; box-shadow: 0 8px 32px rgba(0,0,0,.15); }
+    .about-caption { font-size: .78rem; color: var(--section2-sub); margin-top: 8px; opacity: .7; }
     .about-content { flex: 1; }
     .about-content p { color: var(--section2-sub); line-height: 1.85; transition: color .3s; margin-top: 20px; }
-    @media (max-width: 600px) { .about-inner { flex-direction: column; align-items: center; gap: 28px; } .about-photo { width: 180px; height: 180px; } }
+    @media (max-width: 600px) { .about-inner { flex-direction: column; align-items: center; gap: 28px; } .about-photo { width: 180px; height: 180px; } .about-content { text-align: center; } }
     .linkedin-btn { display: inline-flex; align-items: center; gap: 8px; background: #0a66c2; color: #fff; font-size: .875rem; font-weight: 700; padding: 9px 18px; border-radius: 10px; text-decoration: none; transition: all .2s; }
     .linkedin-btn:hover { background: #004182; transform: translateY(-1px); box-shadow: 0 4px 16px rgba(10,102,194,.3); }
     .market-tags { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 20px; }
@@ -700,7 +702,10 @@
   <div class="section-inner">
     <div class="tag" data-i18n="about_tag">Rólam</div>
     <div class="about-inner">
-      <img src="csanad.jpg" alt="Czárth Csanád" class="about-photo">
+      <figure class="about-figure">
+        <img src="csanad.jpg" alt="Czárth Csanád" class="about-photo">
+        <figcaption class="about-caption">Kép a Cápák közöttből</figcaption>
+      </figure>
       <div class="about-content">
     <h2 data-i18n="about_title">Czárth Csanád</h2>
     <p data-i18n="about_text">BME-s végzettségű IT-s vagyok, 10+ éve dolgozom az IT iparban — multi, KKV és Startup szinten egyaránt. 6 éve foglalkozom marketinggel, jelenlegi legizgalmasabb projektem kapcsán egy havi 400 000 látogatójú weboldalnál töltöm be a vezető marketinges és termékfejlesztő szerepet. Dolgoztam amerikai, magyar, német, cseh, horvát és román piacon is. Az évek alatt kialakított egzisztencia teszi lehetővé, hogy az egyéni, minőségi figyelmet, melyet a magyar vállalkozásokra fordítok, rugalmasan és valódi szakértelemmel végezzem, Netflix-áron.</p>
