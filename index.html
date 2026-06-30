@@ -258,22 +258,22 @@
 
     /* ── REFERENCES ── */
     #references { background: var(--bg2); }
-    .refs-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin-top: 40px; }
+    .refs-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; margin-top: 40px; }
     @media (max-width: 800px) { .refs-grid { grid-template-columns: repeat(2, 1fr); } }
     @media (max-width: 480px) { .refs-grid { grid-template-columns: 1fr; } }
     .ref-card {
-      background: var(--card); border: 1px solid var(--border); border-radius: var(--radius);
-      padding: 22px 20px; display: flex; flex-direction: column; gap: 10px; transition: all .25s;
+      border-radius: 20px; padding: 28px 24px 24px;
+      display: flex; flex-direction: column; gap: 6px; transition: all .25s;
     }
-    .ref-card:hover { box-shadow: 0 8px 32px rgba(13,148,136,.1); transform: translateY(-3px); border-color: rgba(13,148,136,.2); }
-    .ref-pos { display: inline-flex; align-items: center; gap: 6px; font-size: .78rem; font-weight: 700; letter-spacing: .03em; padding: 4px 12px; border-radius: 20px; width: fit-content; }
-    .ref-pos.top3 { background: #dcfce7; color: #15803d; }
-    .ref-pos.top5 { background: #d1fae5; color: #047857; }
-    .ref-pos.top10 { background: #fef9c3; color: #92400e; }
-    .ref-pos::before { content: "◆"; font-size: .5rem; opacity: .75; }
-    .ref-domain { font-weight: 700; font-size: .95rem; color: var(--text); text-decoration: none; transition: color .2s; }
+    html.dark .ref-card { background: var(--card) !important; border: 1px solid var(--border); }
+    .ref-card:hover { transform: translateY(-4px); box-shadow: 0 14px 44px rgba(0,0,0,.09); }
+    .ref-icon { font-size: 2.4rem; margin-bottom: 10px; }
+    .ref-cat { font-size: .68rem; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; color: var(--dim); margin-bottom: 2px; }
+    .ref-domain { font-weight: 800; font-size: 1.05rem; color: var(--text); text-decoration: none; transition: color .2s; display: block; margin-bottom: 6px; }
     .ref-domain:hover { color: var(--t); }
-    .ref-keyword { font-size: .8rem; color: var(--dim); background: var(--bg2); border-radius: 6px; padding: 4px 10px; width: fit-content; font-weight: 500; border: 1px solid var(--border); transition: all .3s; }
+    .ref-desc { font-size: .85rem; color: var(--dim); line-height: 1.65; flex: 1; }
+    .ref-link { font-size: .875rem; font-weight: 700; text-decoration: none; transition: opacity .2s; display: inline-flex; align-items: center; gap: 4px; margin-top: 12px; }
+    .ref-link:hover { opacity: .7; }
 
     /* ── ABOUT ── */
     #about { background: var(--section2-bg); }
@@ -314,6 +314,26 @@
     .footer-copy { font-size: .8rem; color: var(--footer-color); transition: color .3s; }
     .footer-theme { background: none; border: none; cursor: pointer; font-size: 1rem; margin-left: 10px; vertical-align: middle; opacity: .6; transition: opacity .2s; }
     .footer-theme:hover { opacity: 1; }
+
+    /* ── SCROLL ARROW ── */
+    .scroll-arrow {
+      position: absolute; bottom: 36px; left: 50%; transform: translateX(-50%);
+      display: flex; flex-direction: column; align-items: center; gap: 6px;
+      text-decoration: none; z-index: 2; opacity: 0;
+      animation: fadeInArrow 1s ease 1.2s forwards;
+    }
+    @keyframes fadeInArrow {
+      from { opacity: 0; transform: translateX(-50%) translateY(10px); }
+      to   { opacity: 1; transform: translateX(-50%) translateY(0); }
+    }
+    .scroll-arrow svg {
+      animation: bounceArrow 2s ease-in-out infinite;
+    }
+    @keyframes bounceArrow {
+      0%, 100% { transform: translateY(0); }
+      50%       { transform: translateY(6px); }
+    }
+    .scroll-arrow:hover svg { animation-play-state: paused; }
 
     /* ── MOBILE ── */
     @media (max-width: 600px) {
@@ -366,6 +386,12 @@
       <a href="#cta" class="btn btn-outline" data-i18n="hero_cta_contact">Kapcsolatfelvétel</a>
     </div>
   </div>
+  <a class="scroll-arrow" href="#approach" aria-label="Következő szekció">
+    <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <circle cx="14" cy="14" r="13" stroke="rgba(13,148,136,.3)" stroke-width="1.5"/>
+      <polyline points="9,12 14,17 19,12" stroke="#0d9488" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+    </svg>
+  </a>
 </section>
 
 <!-- APPROACH -->
@@ -695,12 +721,12 @@ const T = {
     refs_tag: 'Referenciák', refs_title: 'Valós eredmények, valós oldalakon',
     refs_desc: 'Ezek az oldalak jelenleg is az első Google-találatok között szerepelnek a célzott kulcsszavaikra.',
     refs: [
-      { domain: 'enzodesign.hu', url: 'https://www.enzodesign.hu/', keyword: 'kárpitos zala megye', pos: '1–3. hely', tier: 'top3' },
-      { domain: 'pizza-obuda.hu', url: 'https://pizza-obuda.hu/', keyword: 'pizzaobuda', pos: '5–10. hely', tier: 'top10' },
-      { domain: 'lelkegyogyasza.hu', url: 'https://lelkegyogyasza.hu/', keyword: 'gyermek kineziologia', pos: '1–3. hely', tier: 'top3' },
-      { domain: 'iii-kerulet-etterem.hu', url: 'https://iii-kerulet-etterem.hu/', keyword: 'óbuda éttermek', pos: '1–3. hely', tier: 'top3' },
-      { domain: 'etterem-obuda.hu', url: 'https://etterem-obuda.hu/', keyword: 'budapest különleges éttermek', pos: '2–5. hely', tier: 'top5' },
-      { domain: 'cukraszda-obuda.hu', url: 'https://cukraszda-obuda.hu/', keyword: 'cukrászda 3 kerület', pos: '2–5. hely', tier: 'top5' },
+      { domain: 'enzodesign.hu', url: 'https://www.enzodesign.hu/', icon: '🧵', cat: 'KÁRPITOS', desc: '1–3. hely a Google-ben a „kárpitos zala megye" kulcsszóra', bg: '#fff7ed', accent: '#ea580c' },
+      { domain: 'pizza-obuda.hu', url: 'https://pizza-obuda.hu/', icon: '🍕', cat: 'PIZZÁZÓ', desc: '5–10. hely a Google-ben a „pizzaobuda" kulcsszóra', bg: '#fefce8', accent: '#d97706' },
+      { domain: 'lelkegyogyasza.hu', url: 'https://lelkegyogyasza.hu/', icon: '🌿', cat: 'KINEZIOLÓGIA', desc: '1–3. hely a Google-ben a „gyermek kineziologia" kulcsszóra', bg: '#f0fdf4', accent: '#16a34a' },
+      { domain: 'iii-kerulet-etterem.hu', url: 'https://iii-kerulet-etterem.hu/', icon: '🍽️', cat: 'ÉTTEREM', desc: '1–3. hely a Google-ben az „óbuda éttermek" kulcsszóra', bg: '#fdf2f8', accent: '#db2777' },
+      { domain: 'etterem-obuda.hu', url: 'https://etterem-obuda.hu/', icon: '🍴', cat: 'ÉTTEREM', desc: '2–5. hely a Google-ben a „budapest különleges éttermek" kulcsszóra', bg: '#eff6ff', accent: '#2563eb' },
+      { domain: 'cukraszda-obuda.hu', url: 'https://cukraszda-obuda.hu/', icon: '🎂', cat: 'CUKRÁSZDA', desc: '2–5. hely a Google-ben a „cukrászda 3 kerület" kulcsszóra', bg: '#fff1f2', accent: '#e11d48' },
     ],
     cta_tag: 'Kapcsolat', cta_title: 'Érdekel a demo vagy egy ajánlat?',
     cta_desc: 'Írj emailben — általában 24 órán belül válaszolok. Az ingyenes demo kérésed is itt kezdődik.',
@@ -891,10 +917,12 @@ function renderRefs(lang) {
   if (!refs.length) { section.style.display = 'none'; return; }
   section.style.display = '';
   grid.innerHTML = refs.map(r => `
-    <div class="ref-card">
-      <span class="ref-pos ${r.tier}">${r.pos}</span>
+    <div class="ref-card" style="background:${r.bg}">
+      <div class="ref-icon">${r.icon}</div>
+      <div class="ref-cat">${r.cat}</div>
       <a class="ref-domain" href="${r.url}" target="_blank" rel="noopener">${r.domain}</a>
-      <span class="ref-keyword">${r.keyword}</span>
+      <p class="ref-desc">${r.desc}</p>
+      <a class="ref-link" href="${r.url}" target="_blank" rel="noopener" style="color:${r.accent}">Megnézem →</a>
     </div>`).join('');
 }
 
