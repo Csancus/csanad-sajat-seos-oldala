@@ -184,9 +184,13 @@
     }
     .product-card::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 3px; background: linear-gradient(90deg, var(--t), var(--e)); }
     @media (max-width: 700px) { .product-card { grid-template-columns: 1fr; gap: 28px; } }
-    .price-block { display: flex; flex-direction: column; gap: 4px; margin: 20px 0; }
-    .price-main { font-size: 2.2rem; font-weight: 900; letter-spacing: -.04em; background: linear-gradient(135deg, var(--t), var(--e)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
-    .price-note { font-size: .82rem; color: var(--dim); font-weight: 500; }
+    .price-block { display: flex; flex-direction: column; gap: 6px; margin: 20px 0; }
+    .price-tiers { display: flex; flex-direction: column; gap: 14px; }
+    .price-tier { display: flex; flex-direction: column; gap: 2px; }
+    .price-tier-label { font-size: .72rem; font-weight: 700; color: var(--dim); text-transform: uppercase; letter-spacing: .07em; }
+    .price-main { font-size: 2rem; font-weight: 900; letter-spacing: -.04em; background: linear-gradient(135deg, var(--t), var(--e)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; line-height: 1.1; }
+    .price-vat { font-size: 1.2rem; }
+    .price-note { font-size: .82rem; color: var(--dim); font-weight: 500; margin-top: 4px; }
     .include-list { list-style: none; display: flex; flex-direction: column; gap: 10px; margin: 20px 0; }
     .include-list li { display: flex; gap: 10px; align-items: flex-start; font-size: .9rem; color: var(--text); font-weight: 500; transition: color .3s; }
     .include-list li::before { content: "✓"; color: var(--t); font-weight: 900; flex-shrink: 0; margin-top: 2px; }
@@ -385,10 +389,11 @@
         <rect x="36" y="36" width="62" height="62" rx="17" fill="url(#nlgm)" style="mix-blend-mode: multiply"/>
       </g>
     </svg>
-    Czárth Csanád
+    czarth.com
   </a>
   <div style="display:flex;align-items:center;gap:16px">
     <div class="nav-links">
+      <a href="#hero" data-i18n="nav_home">Home</a>
       <a href="#product" data-i18n="nav_product">Főtermék</a>
       <a href="#services" data-i18n="nav_services">Szolgáltatások</a>
       <a href="#references" data-i18n="nav_refs">Referenciák</a>
@@ -488,8 +493,9 @@
           <div class="netflix-side-label" data-i18n="netflix_yours_label">Nálad van</div>
           <ul>
             <li data-i18n="netflix_yours_1">A szolgáltatásod</li>
-            <li data-i18n="netflix_yours_2">Helyi piac és ügyfelek</li>
-            <li data-i18n="netflix_yours_3">Ambíció a növekedésre</li>
+            <li data-i18n="netflix_yours_2">Helyi piac</li>
+            <li data-i18n="netflix_yours_3">Helyi ügyfelek</li>
+            <li data-i18n="netflix_yours_4">Igény áttekinthető weboldalra</li>
           </ul>
         </div>
       </div>
@@ -499,7 +505,16 @@
       <div>
         <h3 data-i18n="product_price_title">Ár & Csomag</h3>
         <div class="price-block">
-          <span class="price-main">90 000 Ft + ÁFA</span>
+          <div class="price-tiers">
+            <div class="price-tier">
+              <span class="price-tier-label" data-i18n="price_notvat_label">Nem ÁFÁs vállalkozásoknak</span>
+              <span class="price-main">98 000 Ft</span>
+            </div>
+            <div class="price-tier">
+              <span class="price-tier-label" data-i18n="price_vat_label">ÁFÁs vállalkozásoknak</span>
+              <span class="price-main">98 000 Ft <span class="price-vat">+ ÁFA</span></span>
+            </div>
+          </div>
           <span class="price-note" data-i18n="product_price_note">/ év · éves megújuló</span>
         </div>
         <ul class="include-list">
@@ -512,7 +527,7 @@
       </div>
       <div class="demo-block">
         <h3 data-i18n="demo_title">Ingyenes Demo</h3>
-        <p data-i18n="demo_desc">Minden ajánlatnál készítek egy ingyenes demót, hogy lásd, milyen weboldalt és milyen pozíciót tudok elérni a te területeden — kötelezettség nélkül.</p>
+        <p data-i18n="demo_desc">Minden ajánlatnál készítek egy ingyenes demót, hogy lásd, milyen weboldalt tudok készíteni a te területeden — kötelezettség nélkül.</p>
         <a href="#cta" class="btn btn-primary" data-i18n="demo_cta">Demo kérése</a>
       </div>
     </div>
@@ -766,7 +781,7 @@
 <script>
 const T = {
   hu: {
-    nav_product: 'Főtermék', nav_services: 'Szolgáltatások', nav_refs: 'Referenciák', nav_about: 'Rólam', nav_contact: 'Kapcsolat',
+    nav_home: 'Home', nav_product: 'Főtermék', nav_services: 'Szolgáltatások', nav_refs: 'Referenciák', nav_about: 'Rólam', nav_contact: 'Kapcsolat',
     hero_tag: 'SEO & Marketing Szakértő',
     hero_title: 'Google Top 10-es weboldalak,<br><em>évi fix díjjal</em>',
     hero_sub: 'Professzionális weboldalak, amelyek ténylegesen megjelennek a Google keresési eredmények első oldalán — folyamatos karbantartással, frissítéssel és tárhellyel együtt.',
@@ -779,11 +794,12 @@ const T = {
     product_desc: 'Éves megújuló konstrukció: egy célzott, SEO-optimalizált weboldal, amely a kiválasztott kulcsszavakra a Google első oldalán szerepel — gondoskodva a technológiai háttérről, tárhelyről és folyamatos fejlesztésről.',
     netflix_label: 'Hogyan működik', netflix_title: 'Mint a Netflix — ez egy weboldal + domain + szakértelem bérlése.',
     netflix_mine_label: 'Nálam van', netflix_mine_1: 'Jó pozíciójú, erős domainek', netflix_mine_2: '10+ év IT és marketing tapasztalat', netflix_mine_3: 'SEO és technikai tudás', netflix_mine_4: 'Idő folyamatos AI kutatásra',
-    netflix_yours_label: 'Nálad van', netflix_yours_1: 'A szolgáltatásod', netflix_yours_2: 'Helyi piac és ügyfelek', netflix_yours_3: 'Ambíció a növekedésre',
+    netflix_yours_label: 'Nálad van', netflix_yours_1: 'A szolgáltatásod', netflix_yours_2: 'Helyi piac', netflix_yours_3: 'Helyi ügyfelek', netflix_yours_4: 'Igény áttekinthető weboldalra',
     product_price_title: 'Ár & Csomag', product_price_note: '/ év · éves megújuló',
+    price_notvat_label: 'Nem ÁFÁs vállalkozásoknak', price_vat_label: 'ÁFÁs vállalkozásoknak',
     inc_1: 'Google Top 10 pozíció a célzott kulcsszavakra', inc_2: 'Folyamatos karbantartás és technológiai frissítések',
     inc_3: 'Tárhely biztosítva', inc_4: 'SEO monitoring és optimalizálás', inc_5: 'Gyors betöltés, mobilbarát kialakítás',
-    demo_title: 'Ingyenes Demo', demo_desc: 'Minden ajánlatnál készítek egy ingyenes demót, hogy lásd, milyen weboldalt és milyen pozíciót tudok elérni a te területeden — kötelezettség nélkül.',
+    demo_title: 'Ingyenes Demo', demo_desc: 'Minden ajánlatnál készítek egy ingyenes demót, hogy lásd, milyen weboldalt tudok készíteni a te területeden — kötelezettség nélkül.',
     demo_cta: 'Demo kérése',
     services_tag: 'Egyéb Szolgáltatások', services_title: 'Marketing, cégépítés, skálázás',
     services_desc: 'Stratégiai tanácsadás vállalkozásoknak, amelyek növekedni akarnak.',
@@ -803,7 +819,7 @@ const T = {
     refs: [
       { domain: 'enzodesign.hu', url: 'https://www.enzodesign.hu/', icon: '🧵', cat: 'KÁRPITOS', desc: '1–3. hely a Google-ben a „kárpitos zala megye" kulcsszóra', bg: '#fff7ed', accent: '#ea580c' },
       { domain: 'pizza-obuda.hu', url: 'https://pizza-obuda.hu/', icon: '🍕', cat: 'PIZZÁZÓ', desc: '5–10. hely a Google-ben a „pizzaobuda" kulcsszóra', bg: '#fefce8', accent: '#d97706' },
-      { domain: 'lelekgyogyasza.hu', url: 'https://lelekgyogyasza.hu/', icon: '🌿', cat: 'KINEZIOLÓGIA', desc: '1–3. hely a Google-ben a „gyermek kineziologia" kulcsszóra', bg: '#f0fdf4', accent: '#16a34a' },
+      { domain: 'lelkekgyogyasza.hu', url: 'https://lelkekgyogyasza.hu/', icon: '🌿', cat: 'KINEZIOLÓGIA', desc: '1–3. hely a Google-ben a „gyermek kineziologia" kulcsszóra', bg: '#f0fdf4', accent: '#16a34a' },
       { domain: 'iii-kerulet-etterem.hu', url: 'https://iii-kerulet-etterem.hu/', icon: '🍽️', cat: 'ÉTTEREM', desc: '1–3. hely a Google-ben az „óbuda éttermek" kulcsszóra', bg: '#fdf2f8', accent: '#db2777' },
       { domain: 'etterem-obuda.hu', url: 'https://etterem-obuda.hu/', icon: '🍴', cat: 'ÉTTEREM', desc: '2–5. hely a Google-ben a „budapest különleges éttermek" kulcsszóra', bg: '#eff6ff', accent: '#2563eb' },
       { domain: 'cukraszda-obuda.hu', url: 'https://cukraszda-obuda.hu/', icon: '🎂', cat: 'CUKRÁSZDA', desc: '2–5. hely a Google-ben a „cukrászda 3 kerület" kulcsszóra', bg: '#fff1f2', accent: '#e11d48' },
@@ -836,7 +852,7 @@ const T = {
     ],
   },
   en: {
-    nav_product: 'Main Service', nav_services: 'Services', nav_refs: 'References', nav_about: 'About', nav_contact: 'Contact',
+    nav_home: 'Home', nav_product: 'Main Service', nav_services: 'Services', nav_refs: 'References', nav_about: 'About', nav_contact: 'Contact',
     hero_tag: 'SEO & Marketing Expert',
     hero_title: 'Google Top 10 Websites,<br><em>fixed annual fee</em>',
     hero_sub: 'Professional websites that actually rank on the first page of Google — with continuous maintenance, updates and hosting included.',
@@ -849,8 +865,9 @@ const T = {
     product_desc: 'An annual renewable package: a targeted, SEO-optimised website that ranks on Google\'s first page for your chosen keywords — fully maintained, hosted and kept up to date.',
     netflix_label: 'How it works', netflix_title: 'Like Netflix — but for websites. Let\'s combine what we each bring.',
     netflix_mine_label: 'What I bring', netflix_mine_1: 'Strong domains with ranking potential', netflix_mine_2: '10+ years of IT & marketing expertise', netflix_mine_3: 'SEO and technical know-how', netflix_mine_4: 'Time for continuous AI research',
-    netflix_yours_label: 'What you bring', netflix_yours_1: 'Your service', netflix_yours_2: 'Local market and customers', netflix_yours_3: 'Ambition to grow',
+    netflix_yours_label: 'What you bring', netflix_yours_1: 'Your service', netflix_yours_2: 'Local market', netflix_yours_3: 'Local customers', netflix_yours_4: 'Need for a clear website',
     product_price_title: 'Price & Package', product_price_note: '/ year · annual renewal',
+    price_notvat_label: 'For non-VAT businesses', price_vat_label: 'For VAT-registered businesses',
     inc_1: 'Google Top 10 ranking for target keywords', inc_2: 'Continuous maintenance & technology updates',
     inc_3: 'Hosting included', inc_4: 'SEO monitoring & optimisation', inc_5: 'Fast loading, mobile-friendly design',
     demo_title: 'Free Demo', demo_desc: 'Every proposal comes with a free demo page so you can see exactly what kind of website and what ranking position I can achieve in your niche — no commitment.',
@@ -899,7 +916,7 @@ const T = {
     ],
   },
   hr: {
-    nav_product: 'Glavni Servis', nav_services: 'Usluge', nav_refs: 'Reference', nav_about: 'O meni', nav_contact: 'Kontakt',
+    nav_home: 'Home', nav_product: 'Glavni Servis', nav_services: 'Usluge', nav_refs: 'Reference', nav_about: 'O meni', nav_contact: 'Kontakt',
     hero_tag: 'SEO & Marketing Stručnjak',
     hero_title: 'Web stranice u Google Top 10,<br><em>fiksna godišnja naknada</em>',
     hero_sub: 'Profesionalne web stranice koje se stvarno pojavljuju na prvoj stranici Google rezultata — s kontinuiranim održavanjem, ažuriranjima i hostingom u cijeni.',
@@ -912,8 +929,9 @@ const T = {
     product_desc: 'Godišnji obnovljivi paket: ciljana, SEO-optimizirana web stranica koja se rangira na prvoj stranici Googlea za odabrane ključne riječi — potpuno održavana, s hostingom i redovnim ažuriranjima.',
     netflix_label: 'Kako funkcionira', netflix_title: 'Kao Netflix — ali za web stranice. Spojimo ono što svaki od nas donosi.',
     netflix_mine_label: 'Što ja donosim', netflix_mine_1: 'Snažne domene s potencijalom rangiranja', netflix_mine_2: '10+ godina IT i marketing iskustva', netflix_mine_3: 'SEO i tehničko znanje', netflix_mine_4: 'Vrijeme za kontinuirano AI istraživanje',
-    netflix_yours_label: 'Što vi donosite', netflix_yours_1: 'Vaša usluga', netflix_yours_2: 'Lokalno tržište i klijente', netflix_yours_3: 'Ambiciju za rast',
+    netflix_yours_label: 'Što vi donosite', netflix_yours_1: 'Vaša usluga', netflix_yours_2: 'Lokalno tržište', netflix_yours_3: 'Lokalni klijenti', netflix_yours_4: 'Potreba za preglednom web stranicom',
     product_price_title: 'Cijena & Paket', product_price_note: '/ godišnje · godišnja obnova',
+    price_notvat_label: 'Za poduzetnike bez PDV-a', price_vat_label: 'Za PDV obveznike',
     inc_1: 'Google Top 10 pozicija za ciljane ključne riječi', inc_2: 'Kontinuirano održavanje i tehnološka ažuriranja',
     inc_3: 'Hosting uključen', inc_4: 'SEO praćenje i optimizacija', inc_5: 'Brzo učitavanje, dizajn prilagođen mobilnim uređajima',
     demo_title: 'Besplatni Demo', demo_desc: 'Uz svaku ponudu izrađujem besplatnu demo stranicu kako biste vidjeli kakvu web stranicu i kakvu poziciju mogu postići u vašoj niši — bez obveze.',
@@ -962,7 +980,7 @@ const T = {
     ],
   },
   sr: {
-    nav_product: 'Glavna Usluga', nav_services: 'Usluge', nav_refs: 'Reference', nav_about: 'O meni', nav_contact: 'Kontakt',
+    nav_home: 'Home', nav_product: 'Glavna Usluga', nav_services: 'Usluge', nav_refs: 'Reference', nav_about: 'O meni', nav_contact: 'Kontakt',
     hero_tag: 'SEO & Marketing Stručnjak',
     hero_title: 'Veb sajtovi u Google Top 10,<br><em>fiksna godišnja naknada</em>',
     hero_sub: 'Profesionalni veb sajtovi koji se zaista pojavljuju na prvoj stranici Google rezultata — s kontinuiranim održavanjem, ažuriranjima i hostingom u ceni.',
@@ -975,8 +993,9 @@ const T = {
     product_desc: 'Godišnji obnovljivi paket: ciljani, SEO-optimizovani veb sajt koji se rangira na prvoj stranici Google-a za odabrane ključne reči — potpuno održavan, s hostingom i redovnim ažuriranjima.',
     netflix_label: 'Kako funkcioniše', netflix_title: 'Kao Netflix — ali za veb sajtove. Spojimo ono što svako od nas donosi.',
     netflix_mine_label: 'Šta ja donosim', netflix_mine_1: 'Snažne domene sa potencijalom rangiranja', netflix_mine_2: '10+ godina IT i marketing iskustva', netflix_mine_3: 'SEO i tehničko znanje', netflix_mine_4: 'Vreme za kontinuirano AI istraživanje',
-    netflix_yours_label: 'Šta vi donosite', netflix_yours_1: 'Vaša usluga', netflix_yours_2: 'Lokalno tržište i klijente', netflix_yours_3: 'Ambiciju za rast',
+    netflix_yours_label: 'Šta vi donosite', netflix_yours_1: 'Vaša usluga', netflix_yours_2: 'Lokalno tržište', netflix_yours_3: 'Lokalni klijenti', netflix_yours_4: 'Potreba za preglednim sajtom',
     product_price_title: 'Cena & Paket', product_price_note: '/ godišnje · godišnja obnova',
+    price_notvat_label: 'Za preduzetnike bez PDV-a', price_vat_label: 'Za PDV obveznike',
     inc_1: 'Google Top 10 pozicija za ciljane ključne reči', inc_2: 'Kontinuirano održavanje i tehnološka ažuriranja',
     inc_3: 'Hosting uključen', inc_4: 'SEO praćenje i optimizacija', inc_5: 'Brzo učitavanje, dizajn prilagođen mobilnim uređajima',
     demo_title: 'Besplatni Demo', demo_desc: 'Uz svaku ponudu izrađujem besplatnu demo stranicu kako biste videli kakav veb sajt i kakvu poziciju mogu postići u vašoj niši — bez obaveze.',
@@ -1025,7 +1044,7 @@ const T = {
     ],
   },
   de: {
-    nav_product: 'Hauptleistung', nav_services: 'Leistungen', nav_refs: 'Referenzen', nav_about: 'Über mich', nav_contact: 'Kontakt',
+    nav_home: 'Home', nav_product: 'Hauptleistung', nav_services: 'Leistungen', nav_refs: 'Referenzen', nav_about: 'Über mich', nav_contact: 'Kontakt',
     hero_tag: 'SEO & Marketing Experte',
     hero_title: 'Google-Top-10-Websites,<br><em>zum festen Jahrespreis</em>',
     hero_sub: 'Professionelle Websites, die tatsächlich auf der ersten Google-Seite erscheinen — mit laufender Wartung, Updates und Hosting inklusive.',
@@ -1038,8 +1057,9 @@ const T = {
     product_desc: 'Jährlich erneuerbares Paket: eine zielgerichtete, SEO-optimierte Website, die für Ihre Schlüsselbegriffe auf Googles erster Seite rankt — vollständig gewartet, gehostet und aktuell gehalten.',
     netflix_label: 'So funktioniert es', netflix_title: 'Wie Netflix — nur für Websites. Lassen Sie uns kombinieren, was wir mitbringen.',
     netflix_mine_label: 'Was ich mitbringe', netflix_mine_1: 'Starke Domains mit Ranking-Potenzial', netflix_mine_2: '10+ Jahre IT & Marketing-Erfahrung', netflix_mine_3: 'SEO- und technisches Know-how', netflix_mine_4: 'Zeit für kontinuierliche KI-Forschung',
-    netflix_yours_label: 'Was Sie mitbringen', netflix_yours_1: 'Ihre Dienstleistung', netflix_yours_2: 'Lokalen Markt und Kunden', netflix_yours_3: 'Ambition zu wachsen',
+    netflix_yours_label: 'Was Sie mitbringen', netflix_yours_1: 'Ihre Dienstleistung', netflix_yours_2: 'Lokalen Markt', netflix_yours_3: 'Lokale Kunden', netflix_yours_4: 'Wunsch nach einer übersichtlichen Website',
     product_price_title: 'Preis & Paket', product_price_note: '/ Jahr · jährliche Erneuerung',
+    price_notvat_label: 'Für Nicht-USt-Unternehmen', price_vat_label: 'Für USt-pflichtige Unternehmen',
     inc_1: 'Google-Top-10-Ranking für Ziel-Keywords', inc_2: 'Laufende Wartung & technische Updates',
     inc_3: 'Hosting inklusive', inc_4: 'SEO-Monitoring & Optimierung', inc_5: 'Schnelle Ladezeit, mobilfreundliches Design',
     demo_title: 'Kostenlose Demo', demo_desc: 'Zu jedem Angebot erstelle ich eine kostenlose Demo-Seite, damit Sie sehen, welche Art von Website und welche Rankingposition ich in Ihrer Nische erreichen kann — unverbindlich.',
