@@ -547,7 +547,6 @@
         <div>
           <h3 data-i18n="small1_title">Facebook oldal felfrissítése</h3>
           <p data-i18n="small1_desc">Elavult Facebook jelenlét modernizálása: profil, borítókép, tartalom, CTA-k.</p>
-          <span class="hourly-badge" data-i18n="hourly">Órabér alapú</span>
         </div>
       </div>
       <div class="small-card">
@@ -560,7 +559,22 @@
         <div>
           <h3 data-i18n="small2_title">Google Business Profile</h3>
           <p data-i18n="small2_desc">Lokális keresésekre optimalizált Google cégprofil teljes felépítése, kategória beállítás, képek, leírás.</p>
-          <span class="hourly-badge" data-i18n="hourly">Órabér alapú</span>
+        </div>
+      </div>
+      <div class="small-card">
+        <div class="small-icon">
+          <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect x="3" y="2" width="13" height="16" rx="2" stroke="#0d9488" stroke-width="1.8"/>
+            <line x1="6" y1="7" x2="13" y2="7" stroke="#0d9488" stroke-width="1.5" stroke-linecap="round"/>
+            <line x1="6" y1="10" x2="13" y2="10" stroke="#0d9488" stroke-width="1.5" stroke-linecap="round"/>
+            <line x1="6" y1="13" x2="10" y2="13" stroke="#0d9488" stroke-width="1.5" stroke-linecap="round"/>
+            <circle cx="18" cy="18" r="4" stroke="#10b981" stroke-width="1.8"/>
+            <line x1="21" y1="21" x2="22.5" y2="22.5" stroke="#10b981" stroke-width="2" stroke-linecap="round"/>
+          </svg>
+        </div>
+        <div>
+          <h3 data-i18n="small3_title">Alap SEO audit / weboldal frissítése</h3>
+          <p data-i18n="small3_desc">Meglévő weboldal átvilágítása: technikai hibák, sebességprobléma, alap on-page SEO javítások.</p>
         </div>
       </div>
     </div>
@@ -662,7 +676,7 @@ const T = {
     small_desc: 'Kisebb, célzott feladatok rugalmas elszámolással — megbeszélés alapján.',
     small1_title: 'Facebook oldal felfrissítése', small1_desc: 'Elavult Facebook jelenlét modernizálása: profil, borítókép, tartalom, CTA-k.',
     small2_title: 'Google Business Profile', small2_desc: 'Lokális keresésekre optimalizált Google cégprofil teljes felépítése.',
-    hourly: 'Órabér alapú',
+    small3_title: 'Alap SEO audit / weboldal frissítése', small3_desc: 'Meglévő weboldal átvilágítása: technikai hibák, sebességprobléma, alap on-page SEO javítások.',
     about_tag: 'Rólam', about_title: 'Czárth Csanád',
     about_text: 'BME-s végzettségű IT-s vagyok, 10+ éve dolgozom az IT iparban — multi, kkv és startup szinten egyaránt. 6 éve foglalkozom marketinggel, jelenleg egy havi 400 000 látogatójú weboldalnál töltöm be a vezető marketinges és termékfejlesztő szerepet. Dolgoztam amerikai, magyar, német, cseh, horvát és román piacon is. Az itt kapott jó fizetés teszi lehetővé, hogy ezt hobbitevékenységként, rugalmasan és valódi szakértelemmel végezzem.',
     stat1: 'év IT tapasztalat', stat2: 'év marketing', stat3: 'havi látogató / jelenlegi projekt', stat4: 'ország, ahol dolgoztam',
@@ -710,7 +724,7 @@ const T = {
     small_desc: 'Smaller, targeted tasks with flexible billing — by arrangement.',
     small1_title: 'Facebook Page Refresh', small1_desc: 'Modernising an outdated Facebook presence: profile, cover photo, content, CTAs.',
     small2_title: 'Google Business Profile', small2_desc: 'Full setup of a Google business profile optimised for local searches.',
-    hourly: 'Hourly rate',
+    small3_title: 'Basic SEO Audit / Website Refresh', small3_desc: 'Existing website inspection: technical issues, speed problems, basic on-page SEO fixes.',
     about_tag: 'About', about_title: 'Czárth Csanád',
     about_text: 'I\'m a Budapest University of Technology graduate working in IT for 10+ years — across multinational, SME and startup environments. I\'ve been in marketing for 6 years and currently serve as lead marketer and product developer at a website with 400,000 monthly visitors. I\'ve worked in the US, Hungarian, German, Czech, Croatian and Romanian markets. My day job pays well, which is why I can offer this as a side activity — flexibly and with genuine expertise.',
     stat1: 'years in IT', stat2: 'years in marketing', stat3: 'monthly visitors / current project', stat4: 'countries worked in',
@@ -751,7 +765,7 @@ const T = {
     small_desc: 'Manji, ciljani zadaci s fleksibilnim obračunom — po dogovoru.',
     small1_title: 'Osvježavanje Facebook stranice', small1_desc: 'Modernizacija zastarjele Facebook prisutnosti: profil, naslovna fotografija, sadržaj, CTA-ovi.',
     small2_title: 'Google Business Profile', small2_desc: 'Potpuna izrada Google poslovnog profila optimiziranog za lokalna pretraživanja.',
-    hourly: 'Satna naknada',
+    small3_title: 'Osnovni SEO audit / osvježavanje web stranice', small3_desc: 'Pregled postojeće web stranice: tehnički problemi, problemi brzine, osnovna on-page SEO poboljšanja.',
     about_tag: 'O meni', about_title: 'Czárth Csanád',
     about_text: 'Diplomirani sam IT stručnjak Tehničkog sveučilišta u Budimpešti s 10+ godina iskustva u IT industriji — u multinacionalnim tvrtkama, malim i srednjim poduzećima i startupima. 6 godina bavim se marketingom, a trenutno sam vodeći marketer i razvijač proizvoda na web stranici s 400 000 mjesečnih posjetitelja. Radio sam na američkom, mađarskom, njemačkom, češkom, hrvatskom i rumunjskom tržištu. Dobra plaća na svom poslu omogućuje mi da ovo obavljam kao sporednu aktivnost — fleksibilno i sa stvarnom stručnošću.',
     stat1: 'godina u IT-u', stat2: 'godina u marketingu', stat3: 'mjes. posjetitelja / trenutni projekt', stat4: 'zemalja u kojima sam radio',
@@ -792,7 +806,7 @@ const T = {
     small_desc: 'Manji, ciljani zadaci s fleksibilnim obračunom — po dogovoru.',
     small1_title: 'Osvežavanje Facebook stranice', small1_desc: 'Modernizacija zastarele Facebook prisutnosti: profil, naslovna fotografija, sadržaj, CTA-ovi.',
     small2_title: 'Google Business Profile', small2_desc: 'Potpuna izrada Google poslovnog profila optimizovanog za lokalna pretraživanja.',
-    hourly: 'Satna naknada',
+    small3_title: 'Osnovni SEO audit / osvežavanje veb sajta', small3_desc: 'Pregled postojećeg veb sajta: tehnički problemi, problemi brzine, osnovna on-page SEO poboljšanja.',
     about_tag: 'O meni', about_title: 'Czárth Csanád',
     about_text: 'Diplomirani sam IT stručnjak Tehničkog univerziteta u Budimpešti s 10+ godina iskustva u IT industriji — u multinacionalnim kompanijama, malim i srednjim preduzećima i startapima. 6 godina bavim se marketingom, a trenutno sam vodeći marketer i razvijač proizvoda na veb sajtu s 400 000 mesečnih posetilaca. Radio sam na američkom, mađarskom, nemačkom, češkom, hrvatskom i rumunskom tržištu. Dobra plata na svom poslu omogućuje mi da ovo obavljam kao sporednu aktivnost — fleksibilno i sa stvarnom stručnošću.',
     stat1: 'godina u IT-u', stat2: 'godina u marketingu', stat3: 'mes. posetilaca / trenutni projekat', stat4: 'zemalja u kojima sam radio',
@@ -833,7 +847,7 @@ const T = {
     small_desc: 'Kleinere, gezielte Aufgaben mit flexibler Abrechnung — nach Absprache.',
     small1_title: 'Facebook-Seite auffrischen', small1_desc: 'Modernisierung eines veralteten Facebook-Auftritts: Profil, Titelbild, Inhalte, CTAs.',
     small2_title: 'Google Business Profile', small2_desc: 'Vollständige Einrichtung eines für lokale Suchanfragen optimierten Google-Unternehmensprofils.',
-    hourly: 'Stundensatz',
+    small3_title: 'Basis-SEO-Audit / Website-Auffrischung', small3_desc: 'Überprüfung einer bestehenden Website: technische Fehler, Ladezeiten, grundlegende On-Page-SEO-Verbesserungen.',
     about_tag: 'Über mich', about_title: 'Czárth Csanád',
     about_text: 'Ich bin IT-Absolvent der Technischen Universität Budapest mit über 10 Jahren Erfahrung in der IT-Branche — in multinationalen Unternehmen, KMUs und Start-ups. Seit 6 Jahren bin ich im Marketing tätig und arbeite derzeit als leitender Marketer und Produktentwickler bei einer Website mit 400.000 monatlichen Besuchern. Ich habe auf dem US-amerikanischen, ungarischen, deutschen, tschechischen, kroatischen und rumänischen Markt gearbeitet. Mein Hauptjob ist gut bezahlt, weshalb ich diese Tätigkeit als Nebenbeschäftigung — flexibel und mit echter Expertise — anbieten kann.',
     stat1: 'Jahre IT-Erfahrung', stat2: 'Jahre Marketing', stat3: 'mon. Besucher / aktuelles Projekt', stat4: 'Länder, in denen ich tätig war',
