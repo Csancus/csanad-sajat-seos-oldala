@@ -194,6 +194,23 @@
     html.dark .demo-block { background: rgba(13,148,136,.1); border-color: rgba(13,148,136,.25); }
     .demo-block h3 { color: var(--t); font-size: 1.15rem; }
     .demo-block p { margin: 10px 0 20px; font-size: .9rem; }
+    .netflix-block {
+      margin-top: 32px; margin-bottom: 0;
+      background: linear-gradient(135deg, #ecfdf5 0%, #f0fdf9 100%);
+      border: 1.5px solid rgba(13,148,136,.2); border-radius: 20px;
+      padding: 28px 32px;
+    }
+    html.dark .netflix-block { background: rgba(13,148,136,.08); border-color: rgba(13,148,136,.2); }
+    .netflix-label { font-size: .72rem; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; color: var(--t); margin-bottom: 10px; }
+    .netflix-title { font-size: 1.15rem; font-weight: 800; color: var(--text); margin-bottom: 16px; letter-spacing: -.02em; transition: color .3s; }
+    .netflix-cols { display: grid; grid-template-columns: 1fr auto 1fr; align-items: center; gap: 16px; margin-top: 16px; }
+    @media (max-width: 600px) { .netflix-cols { grid-template-columns: 1fr; gap: 8px; } .netflix-plus { font-size: 1.4rem; text-align: center; } }
+    .netflix-side { background: var(--card); border: 1px solid var(--border); border-radius: 14px; padding: 18px 20px; transition: background .3s; }
+    .netflix-side-label { font-size: .7rem; font-weight: 700; text-transform: uppercase; letter-spacing: .08em; color: var(--t); margin-bottom: 10px; }
+    .netflix-side ul { list-style: none; display: flex; flex-direction: column; gap: 7px; }
+    .netflix-side ul li { font-size: .875rem; color: var(--text); display: flex; align-items: flex-start; gap: 8px; transition: color .3s; }
+    .netflix-side ul li::before { content: "✦"; color: var(--t); font-size: .65rem; flex-shrink: 0; margin-top: 3px; }
+    .netflix-plus { font-size: 1.8rem; text-align: center; color: var(--t); font-weight: 900; }
 
     /* ── APPROACH ── */
     #approach { background: var(--bg); padding: 72px 5vw; }
@@ -205,7 +222,7 @@
     }
     .approach-card::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 3px; background: linear-gradient(90deg, var(--t), var(--e)); }
     .approach-card:hover { transform: translateY(-3px); box-shadow: 0 10px 36px rgba(13,148,136,.1); }
-    .approach-icon { font-size: 2.2rem; margin-bottom: 16px; }
+    .approach-icon { width: 52px; height: 52px; background: linear-gradient(135deg, rgba(13,148,136,.12) 0%, rgba(16,185,129,.08) 100%); border-radius: 14px; padding: 11px; margin-bottom: 20px; display: flex; align-items: center; justify-content: center; border: 1px solid rgba(13,148,136,.12); }
     .approach-card h3 { font-size: 1.05rem; font-weight: 800; color: var(--text); margin-bottom: 8px; letter-spacing: -.02em; }
     .approach-card p { font-size: .875rem; line-height: 1.7; }
 
@@ -219,7 +236,7 @@
     .service-card::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 0; background: linear-gradient(90deg, var(--t), var(--e)); transition: height .25s; }
     .service-card:hover { box-shadow: 0 12px 44px rgba(13,148,136,.12); transform: translateY(-4px); border-color: rgba(13,148,136,.25); }
     .service-card:hover::before { height: 3px; }
-    .service-icon { font-size: 2rem; margin-bottom: 14px; }
+    .service-icon { width: 48px; height: 48px; background: linear-gradient(135deg, rgba(13,148,136,.1) 0%, rgba(16,185,129,.07) 100%); border-radius: 12px; padding: 10px; margin-bottom: 16px; display: flex; align-items: center; justify-content: center; border: 1px solid rgba(13,148,136,.1); }
     .service-card h3 { font-size: 1rem; }
     .service-card p { font-size: .85rem; margin-top: 6px; }
 
@@ -236,7 +253,7 @@
     .small-card:hover { transform: translateY(-3px); box-shadow: 0 8px 28px rgba(13,148,136,.1); }
     .small-card h3 { color: var(--small-card-text); font-size: .95rem; transition: color .3s; }
     .small-card p { color: var(--small-card-sub); font-size: .85rem; margin-top: 4px; transition: color .3s; }
-    .small-icon { font-size: 1.8rem; flex-shrink: 0; }
+    .small-icon { width: 44px; height: 44px; flex-shrink: 0; background: linear-gradient(135deg, rgba(13,148,136,.1) 0%, rgba(16,185,129,.07) 100%); border-radius: 12px; padding: 10px; display: flex; align-items: center; justify-content: center; border: 1px solid rgba(13,148,136,.1); }
     .hourly-badge { display: inline-block; background: var(--hourly-bg); color: var(--hourly-color); font-size: .72rem; font-weight: 700; padding: 3px 10px; border-radius: 6px; margin-top: 10px; border: 1px solid var(--hourly-border); transition: all .3s; }
 
     /* ── REFERENCES ── */
@@ -253,7 +270,7 @@
     .ref-pos.top3 { background: #dcfce7; color: #15803d; }
     .ref-pos.top5 { background: #d1fae5; color: #047857; }
     .ref-pos.top10 { background: #fef9c3; color: #92400e; }
-    .ref-pos::before { content: "🔍"; font-size: .8rem; }
+    .ref-pos::before { content: "◆"; font-size: .5rem; opacity: .75; }
     .ref-domain { font-weight: 700; font-size: .95rem; color: var(--text); text-decoration: none; transition: color .2s; }
     .ref-domain:hover { color: var(--t); }
     .ref-keyword { font-size: .8rem; color: var(--dim); background: var(--bg2); border-radius: 6px; padding: 4px 10px; width: fit-content; font-weight: 500; border: 1px solid var(--border); transition: all .3s; }
@@ -349,17 +366,44 @@
     <h2 data-i18n="approach_title">Egyéni szakértő, nem ügynökség</h2>
     <div class="approach-grid">
       <div class="approach-card">
-        <div class="approach-icon">🎯</div>
+        <div class="approach-icon">
+          <svg viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="15" cy="10" r="4" stroke="#0d9488" stroke-width="2" stroke-linecap="round"/>
+            <path d="M7 27c0-4.418 3.582-8 8-8s8 3.582 8 8" stroke="#0d9488" stroke-width="2" stroke-linecap="round"/>
+            <circle cx="15" cy="10" r="8.5" stroke="#10b981" stroke-width="1.5" stroke-dasharray="3.5 2.5"/>
+          </svg>
+        </div>
         <h3 data-i18n="ap1_title">Személyes figyelem</h3>
         <p data-i18n="ap1_desc">Nem egy névtelen team, hanem én foglalkozom a vállalkozásoddal — elejétől végéig. Minden ügyfél megkapja a teljes fókuszt és a személyes törődést.</p>
       </div>
       <div class="approach-card">
-        <div class="approach-icon">🛠️</div>
+        <div class="approach-icon">
+          <svg viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <line x1="15" y1="5" x2="9" y2="25" stroke="#0d9488" stroke-width="2" stroke-linecap="round"/>
+            <line x1="15" y1="5" x2="21" y2="25" stroke="#0d9488" stroke-width="2" stroke-linecap="round"/>
+            <circle cx="15" cy="11.5" r="2.2" fill="#10b981"/>
+            <path d="M9 22 Q15 27.5 21 22" stroke="#10b981" stroke-width="2" stroke-linecap="round" fill="none"/>
+          </svg>
+        </div>
         <h3 data-i18n="ap2_title">Kézműves precizitás</h3>
         <p data-i18n="ap2_desc">Minden projektet alaposan, egyedileg dolgozok ki — a te vállalkozásodra szabva. Nem sablon, nem tömeggyártás. Az aprólékos munka hozza a tartós eredményt.</p>
       </div>
       <div class="approach-card">
-        <div class="approach-icon">⚡</div>
+        <div class="approach-icon">
+          <svg viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="15" cy="5" r="2" fill="#0d9488"/>
+            <circle cx="5" cy="15" r="2" fill="#0d9488"/>
+            <circle cx="25" cy="15" r="2" fill="#0d9488"/>
+            <circle cx="10" cy="24" r="2" fill="#10b981"/>
+            <circle cx="20" cy="24" r="2" fill="#10b981"/>
+            <circle cx="15" cy="15" r="3" stroke="#0d9488" stroke-width="2" fill="rgba(13,148,136,.1)"/>
+            <line x1="15" y1="7" x2="15" y2="12" stroke="#0d9488" stroke-width="1.5"/>
+            <line x1="7" y1="15" x2="12" y2="15" stroke="#0d9488" stroke-width="1.5"/>
+            <line x1="18" y1="15" x2="23" y2="15" stroke="#0d9488" stroke-width="1.5"/>
+            <line x1="12.5" y1="17" x2="10" y2="22" stroke="#10b981" stroke-width="1.5"/>
+            <line x1="17.5" y1="17" x2="20" y2="22" stroke="#10b981" stroke-width="1.5"/>
+          </svg>
+        </div>
         <h3 data-i18n="ap3_title">AI eszközök + emberi stratégia</h3>
         <p data-i18n="ap3_desc">A legmodernebb AI eszközöket is bevetek a hatékonyságért — de a döntések, az elemzés és a stratégia mindig emberi tudáson és tapasztalaton alapul.</p>
       </div>
@@ -373,6 +417,30 @@
     <div class="tag" data-i18n="product_tag">Főtermék</div>
     <h2 data-i18n="product_title">Weboldal a Google Top 10-ben</h2>
     <p data-i18n="product_desc">Éves megújuló konstrukció: egy célzott, SEO-optimalizált weboldal, amely a kiválasztott kulcsszavakra a Google első oldalán szerepel — gondoskodva a technológiai háttérről, tárhelyről és folyamatos fejlesztésről.</p>
+    <div class="netflix-block">
+      <div class="netflix-label" data-i18n="netflix_label">Hogyan működik</div>
+      <div class="netflix-title" data-i18n="netflix_title">Mint a Netflix — csak weboldal bérlés. Tegyük össze, amid van.</div>
+      <div class="netflix-cols">
+        <div class="netflix-side">
+          <div class="netflix-side-label" data-i18n="netflix_mine_label">Nálam van</div>
+          <ul>
+            <li data-i18n="netflix_mine_1">Jó pozíciójú, erős domainek</li>
+            <li data-i18n="netflix_mine_2">6 év marketing tapasztalat</li>
+            <li data-i18n="netflix_mine_3">SEO és technikai tudás</li>
+          </ul>
+        </div>
+        <div class="netflix-plus">+</div>
+        <div class="netflix-side">
+          <div class="netflix-side-label" data-i18n="netflix_yours_label">Nálad van</div>
+          <ul>
+            <li data-i18n="netflix_yours_1">Vállalkozás vagy szolgáltatás</li>
+            <li data-i18n="netflix_yours_2">Helyi piac és ügyfelek</li>
+            <li data-i18n="netflix_yours_3">Ambíció a növekedésre</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
     <div class="product-card">
       <div>
         <h3 data-i18n="product_price_title">Ár & Csomag</h3>
@@ -389,7 +457,7 @@
         </ul>
       </div>
       <div class="demo-block">
-        <h3 data-i18n="demo_title">🎯 Ingyenes Demo</h3>
+        <h3 data-i18n="demo_title">Ingyenes Demo</h3>
         <p data-i18n="demo_desc">Minden ajánlatnál készítek egy ingyenes demonstrációs oldalt, hogy lásd, milyen weboldalt és milyen pozíciót tudok elérni a te területeden — kötelezettség nélkül.</p>
         <a href="#cta" class="btn btn-primary" data-i18n="demo_cta">Demo kérése</a>
       </div>
@@ -405,22 +473,55 @@
     <p data-i18n="services_desc">Stratégiai tanácsadás vállalkozásoknak, amelyek növekedni akarnak — a nulláról induló cégépítéstől a meglévő rendszerek skálázásáig.</p>
     <div class="services-grid">
       <div class="service-card">
-        <div class="service-icon">📈</div>
+        <div class="service-icon">
+          <svg viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect x="3" y="18" width="5" height="7" rx="1.5" stroke="#0d9488" stroke-width="1.8"/>
+            <rect x="11" y="13" width="5" height="12" rx="1.5" stroke="#0d9488" stroke-width="1.8"/>
+            <rect x="19" y="8" width="5" height="17" rx="1.5" stroke="#0d9488" stroke-width="1.8"/>
+            <path d="M5 15L13.5 10.5L22.5 6" stroke="#10b981" stroke-width="1.8" stroke-linecap="round"/>
+            <polyline points="19,6 22.5,6 22.5,9" stroke="#10b981" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </div>
         <h3 data-i18n="svc1_title">Marketing Tanácsadás</h3>
         <p data-i18n="svc1_desc">Teljes körű marketing stratégia, csatorna kiválasztás, kampány tervezés és optimalizálás.</p>
       </div>
       <div class="service-card">
-        <div class="service-icon">🏗️</div>
+        <div class="service-icon">
+          <svg viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect x="9" y="4" width="10" height="7" rx="2" stroke="#0d9488" stroke-width="1.8"/>
+            <rect x="3" y="17" width="9" height="7" rx="2" stroke="#0d9488" stroke-width="1.8"/>
+            <rect x="16" y="17" width="9" height="7" rx="2" stroke="#10b981" stroke-width="1.8"/>
+            <line x1="14" y1="11" x2="7.5" y2="17" stroke="#0d9488" stroke-width="1.5" stroke-dasharray="2 2"/>
+            <line x1="14" y1="11" x2="20.5" y2="17" stroke="#10b981" stroke-width="1.5" stroke-dasharray="2 2"/>
+          </svg>
+        </div>
         <h3 data-i18n="svc2_title">Cégépítés</h3>
         <p data-i18n="svc2_desc">Üzleti folyamatok, csapatépítés, operatív struktúra kialakítása az alapoktól.</p>
       </div>
       <div class="service-card">
-        <div class="service-icon">🚀</div>
+        <div class="service-icon">
+          <svg viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <line x1="14" y1="23" x2="14" y2="7" stroke="#0d9488" stroke-width="2" stroke-linecap="round"/>
+            <polyline points="9,12 14,7 19,12" stroke="#0d9488" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            <line x1="5" y1="17" x2="9" y2="17" stroke="#10b981" stroke-width="1.8" stroke-linecap="round"/>
+            <line x1="5" y1="13" x2="7" y2="13" stroke="#10b981" stroke-width="1.5" stroke-linecap="round" opacity="0.6"/>
+            <line x1="19" y1="17" x2="23" y2="17" stroke="#10b981" stroke-width="1.8" stroke-linecap="round"/>
+            <line x1="21" y1="13" x2="23" y2="13" stroke="#10b981" stroke-width="1.5" stroke-linecap="round" opacity="0.6"/>
+          </svg>
+        </div>
         <h3 data-i18n="svc3_title">Skálázás</h3>
         <p data-i18n="svc3_desc">Növekedési stratégia: meglévő bevételek és rendszerek hatékony bővítése új piacokra.</p>
       </div>
       <div class="service-card">
-        <div class="service-icon">🔍</div>
+        <div class="service-icon">
+          <svg viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="12" cy="12" r="8" stroke="#0d9488" stroke-width="1.8"/>
+            <line x1="18.5" y1="18.5" x2="24" y2="24" stroke="#0d9488" stroke-width="2" stroke-linecap="round"/>
+            <line x1="8" y1="14" x2="8" y2="16" stroke="#10b981" stroke-width="2" stroke-linecap="round"/>
+            <line x1="11.5" y1="11.5" x2="11.5" y2="16" stroke="#10b981" stroke-width="2" stroke-linecap="round"/>
+            <line x1="15" y1="9" x2="15" y2="16" stroke="#10b981" stroke-width="2" stroke-linecap="round"/>
+          </svg>
+        </div>
         <h3 data-i18n="svc4_title">SEO Tanácsadás</h3>
         <p data-i18n="svc4_desc">Kulcsszókutatás, technikai audit, tartalomstratégia és linképítés — komplex SEO megközelítéssel.</p>
       </div>
@@ -436,7 +537,13 @@
     <p data-i18n="small_desc">Kisebb, célzott feladatok rugalmas elszámolással — megbeszélés alapján.</p>
     <div class="small-grid">
       <div class="small-card">
-        <div class="small-icon">📘</div>
+        <div class="small-icon">
+          <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect x="5" y="2" width="14" height="20" rx="3" stroke="#0d9488" stroke-width="1.8"/>
+            <path d="M9 11 A4 4 0 1 1 9 15" stroke="#10b981" stroke-width="1.8" stroke-linecap="round"/>
+            <polyline points="7,11 9,11 9,9" stroke="#10b981" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </div>
         <div>
           <h3 data-i18n="small1_title">Facebook oldal felfrissítése</h3>
           <p data-i18n="small1_desc">Elavult Facebook jelenlét modernizálása: profil, borítókép, tartalom, CTA-k.</p>
@@ -444,7 +551,12 @@
         </div>
       </div>
       <div class="small-card">
-        <div class="small-icon">📍</div>
+        <div class="small-icon">
+          <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7Z" stroke="#0d9488" stroke-width="1.8"/>
+            <circle cx="12" cy="9" r="2.5" stroke="#10b981" stroke-width="1.8"/>
+          </svg>
+        </div>
         <div>
           <h3 data-i18n="small2_title">Google Business Profile</h3>
           <p data-i18n="small2_desc">Lokális keresésekre optimalizált Google cégprofil teljes felépítése, kategória beállítás, képek, leírás.</p>
@@ -532,10 +644,13 @@ const T = {
     ap3_title: 'AI eszközök + emberi stratégia', ap3_desc: 'A legmodernebb AI eszközöket is bevetek a hatékonyságért — de a döntések, az elemzés és a stratégia mindig emberi tudáson és tapasztalaton alapul.',
     product_tag: 'Főtermék', product_title: 'Weboldal a Google Top 10-ben',
     product_desc: 'Éves megújuló konstrukció: egy célzott, SEO-optimalizált weboldal, amely a kiválasztott kulcsszavakra a Google első oldalán szerepel — gondoskodva a technológiai háttérről, tárhelyről és folyamatos fejlesztésről.',
+    netflix_label: 'Hogyan működik', netflix_title: 'Mint a Netflix — csak weboldal bérlés. Tegyük össze, amid van.',
+    netflix_mine_label: 'Nálam van', netflix_mine_1: 'Jó pozíciójú, erős domainek', netflix_mine_2: '6 év marketing tapasztalat', netflix_mine_3: 'SEO és technikai tudás',
+    netflix_yours_label: 'Nálad van', netflix_yours_1: 'Vállalkozás vagy szolgáltatás', netflix_yours_2: 'Helyi piac és ügyfelek', netflix_yours_3: 'Ambíció a növekedésre',
     product_price_title: 'Ár & Csomag', product_price_note: '/ év · éves megújuló',
     inc_1: 'Google Top 10 pozíció a célzott kulcsszavakra', inc_2: 'Folyamatos karbantartás és technológiai frissítések',
     inc_3: 'Tárhely biztosítva', inc_4: 'SEO monitoring és optimalizálás', inc_5: 'Gyors betöltés, mobilbarát kialakítás',
-    demo_title: '🎯 Ingyenes Demo', demo_desc: 'Minden ajánlatnál készítek egy ingyenes demonstrációs oldalt, hogy lásd, milyen weboldalt és milyen pozíciót tudok elérni a te területeden — kötelezettség nélkül.',
+    demo_title: 'Ingyenes Demo', demo_desc: 'Minden ajánlatnál készítek egy ingyenes demonstrációs oldalt, hogy lásd, milyen weboldalt és milyen pozíciót tudok elérni a te területeden — kötelezettség nélkül.',
     demo_cta: 'Demo kérése',
     services_tag: 'Egyéb Szolgáltatások', services_title: 'Marketing, cégépítés, skálázás',
     services_desc: 'Stratégiai tanácsadás vállalkozásoknak, amelyek növekedni akarnak.',
@@ -577,10 +692,13 @@ const T = {
     ap3_title: 'AI tools + human strategy', ap3_desc: 'I use cutting-edge AI tools for efficiency — but decisions, analysis and strategy are always grounded in human expertise and experience.',
     product_tag: 'Main Service', product_title: 'Website in Google\'s Top 10',
     product_desc: 'An annual renewable package: a targeted, SEO-optimised website that ranks on Google\'s first page for your chosen keywords — fully maintained, hosted and kept up to date.',
+    netflix_label: 'How it works', netflix_title: 'Like Netflix — but for websites. Let\'s combine what we each bring.',
+    netflix_mine_label: 'What I bring', netflix_mine_1: 'Strong domains with ranking potential', netflix_mine_2: '6 years of marketing expertise', netflix_mine_3: 'SEO and technical know-how',
+    netflix_yours_label: 'What you bring', netflix_yours_1: 'A business or service', netflix_yours_2: 'Local market and customers', netflix_yours_3: 'Ambition to grow',
     product_price_title: 'Price & Package', product_price_note: '/ year · annual renewal',
     inc_1: 'Google Top 10 ranking for target keywords', inc_2: 'Continuous maintenance & technology updates',
     inc_3: 'Hosting included', inc_4: 'SEO monitoring & optimisation', inc_5: 'Fast loading, mobile-friendly design',
-    demo_title: '🎯 Free Demo', demo_desc: 'Every proposal comes with a free demo page so you can see exactly what kind of website and what ranking position I can achieve in your niche — no commitment.',
+    demo_title: 'Free Demo', demo_desc: 'Every proposal comes with a free demo page so you can see exactly what kind of website and what ranking position I can achieve in your niche — no commitment.',
     demo_cta: 'Request Demo',
     services_tag: 'Other Services', services_title: 'Marketing, Company Building & Scaling',
     services_desc: 'Strategic consulting for businesses that want to grow.',
@@ -615,10 +733,13 @@ const T = {
     ap3_title: 'AI alati + ljudska strategija', ap3_desc: 'Koristim najsuvremenije AI alate za učinkovitost — ali odluke, analiza i strategija uvijek počivaju na ljudskom znanju i iskustvu.',
     product_tag: 'Glavni Servis', product_title: 'Web stranica u Google Top 10',
     product_desc: 'Godišnji obnovljivi paket: ciljana, SEO-optimizirana web stranica koja se rangira na prvoj stranici Googlea za odabrane ključne riječi — potpuno održavana, s hostingom i redovnim ažuriranjima.',
+    netflix_label: 'Kako funkcionira', netflix_title: 'Kao Netflix — ali za web stranice. Spojimo ono što svaki od nas donosi.',
+    netflix_mine_label: 'Što ja donosim', netflix_mine_1: 'Snažne domene s potencijalom rangiranja', netflix_mine_2: '6 godina marketinškog iskustva', netflix_mine_3: 'SEO i tehničko znanje',
+    netflix_yours_label: 'Što vi donosite', netflix_yours_1: 'Posao ili uslugu', netflix_yours_2: 'Lokalno tržište i klijente', netflix_yours_3: 'Ambiciju za rast',
     product_price_title: 'Cijena & Paket', product_price_note: '/ godišnje · godišnja obnova',
     inc_1: 'Google Top 10 pozicija za ciljane ključne riječi', inc_2: 'Kontinuirano održavanje i tehnološka ažuriranja',
     inc_3: 'Hosting uključen', inc_4: 'SEO praćenje i optimizacija', inc_5: 'Brzo učitavanje, dizajn prilagođen mobilnim uređajima',
-    demo_title: '🎯 Besplatni Demo', demo_desc: 'Uz svaku ponudu izrađujem besplatnu demo stranicu kako biste vidjeli kakvu web stranicu i kakvu poziciju mogu postići u vašoj niši — bez obveze.',
+    demo_title: 'Besplatni Demo', demo_desc: 'Uz svaku ponudu izrađujem besplatnu demo stranicu kako biste vidjeli kakvu web stranicu i kakvu poziciju mogu postići u vašoj niši — bez obveze.',
     demo_cta: 'Zatraži Demo',
     services_tag: 'Ostale Usluge', services_title: 'Marketing, izgradnja tvrtke i skaliranje',
     services_desc: 'Strateško savjetovanje za tvrtke koje žele rasti.',
@@ -653,10 +774,13 @@ const T = {
     ap3_title: 'AI alati + ljudska strategija', ap3_desc: 'Koristim najsavremenije AI alate za efikasnost — ali odluke, analiza i strategija uvek počivaju na ljudskom znanju i iskustvu.',
     product_tag: 'Glavna Usluga', product_title: 'Veb sajt u Google Top 10',
     product_desc: 'Godišnji obnovljivi paket: ciljani, SEO-optimizovani veb sajt koji se rangira na prvoj stranici Google-a za odabrane ključne reči — potpuno održavan, s hostingom i redovnim ažuriranjima.',
+    netflix_label: 'Kako funkcioniše', netflix_title: 'Kao Netflix — ali za veb sajtove. Spojimo ono što svako od nas donosi.',
+    netflix_mine_label: 'Šta ja donosim', netflix_mine_1: 'Snažne domene sa potencijalom rangiranja', netflix_mine_2: '6 godina marketing iskustva', netflix_mine_3: 'SEO i tehničko znanje',
+    netflix_yours_label: 'Šta vi donosite', netflix_yours_1: 'Posao ili uslugu', netflix_yours_2: 'Lokalno tržište i klijente', netflix_yours_3: 'Ambiciju za rast',
     product_price_title: 'Cena & Paket', product_price_note: '/ godišnje · godišnja obnova',
     inc_1: 'Google Top 10 pozicija za ciljane ključne reči', inc_2: 'Kontinuirano održavanje i tehnološka ažuriranja',
     inc_3: 'Hosting uključen', inc_4: 'SEO praćenje i optimizacija', inc_5: 'Brzo učitavanje, dizajn prilagođen mobilnim uređajima',
-    demo_title: '🎯 Besplatni Demo', demo_desc: 'Uz svaku ponudu izrađujem besplatnu demo stranicu kako biste videli kakav veb sajt i kakvu poziciju mogu postići u vašoj niši — bez obaveze.',
+    demo_title: 'Besplatni Demo', demo_desc: 'Uz svaku ponudu izrađujem besplatnu demo stranicu kako biste videli kakav veb sajt i kakvu poziciju mogu postići u vašoj niši — bez obaveze.',
     demo_cta: 'Zatraži Demo',
     services_tag: 'Ostale Usluge', services_title: 'Marketing, izgradnja firme i skaliranje',
     services_desc: 'Strateško savetovanje za firme koje žele da rastu.',
@@ -691,10 +815,13 @@ const T = {
     ap3_title: 'KI-Tools + menschliche Strategie', ap3_desc: 'Ich setze modernste KI-Tools für Effizienz ein — aber Entscheidungen, Analysen und Strategie basieren stets auf menschlichem Fachwissen und Erfahrung.',
     product_tag: 'Hauptleistung', product_title: 'Website in Googles Top 10',
     product_desc: 'Jährlich erneuerbares Paket: eine zielgerichtete, SEO-optimierte Website, die für Ihre Schlüsselbegriffe auf Googles erster Seite rankt — vollständig gewartet, gehostet und aktuell gehalten.',
+    netflix_label: 'So funktioniert es', netflix_title: 'Wie Netflix — nur für Websites. Lassen Sie uns kombinieren, was wir mitbringen.',
+    netflix_mine_label: 'Was ich mitbringe', netflix_mine_1: 'Starke Domains mit Ranking-Potenzial', netflix_mine_2: '6 Jahre Marketing-Erfahrung', netflix_mine_3: 'SEO- und technisches Know-how',
+    netflix_yours_label: 'Was Sie mitbringen', netflix_yours_1: 'Ein Unternehmen oder eine Dienstleistung', netflix_yours_2: 'Lokalen Markt und Kunden', netflix_yours_3: 'Ambition zu wachsen',
     product_price_title: 'Preis & Paket', product_price_note: '/ Jahr · jährliche Erneuerung',
     inc_1: 'Google-Top-10-Ranking für Ziel-Keywords', inc_2: 'Laufende Wartung & technische Updates',
     inc_3: 'Hosting inklusive', inc_4: 'SEO-Monitoring & Optimierung', inc_5: 'Schnelle Ladezeit, mobilfreundliches Design',
-    demo_title: '🎯 Kostenlose Demo', demo_desc: 'Zu jedem Angebot erstelle ich eine kostenlose Demo-Seite, damit Sie sehen, welche Art von Website und welche Rankingposition ich in Ihrer Nische erreichen kann — unverbindlich.',
+    demo_title: 'Kostenlose Demo', demo_desc: 'Zu jedem Angebot erstelle ich eine kostenlose Demo-Seite, damit Sie sehen, welche Art von Website und welche Rankingposition ich in Ihrer Nische erreichen kann — unverbindlich.',
     demo_cta: 'Demo anfragen',
     services_tag: 'Weitere Leistungen', services_title: 'Marketing, Unternehmensaufbau & Skalierung',
     services_desc: 'Strategische Beratung für Unternehmen, die wachsen wollen.',
